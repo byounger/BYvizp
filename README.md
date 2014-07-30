@@ -1,4 +1,7 @@
-BYvizp.github.io
-================
+BYProduction_Thesis
+===================
 
-InViz Project Site!!
+Project site of for my thesis
+
+Part 1:
+Currently the site is the shell for the actual project. Deciding between submitted projects before adding additional content.

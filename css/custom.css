@@ -1,0 +1,38 @@
+/* this is a custom CSS stylesheet*/
+.row{
+	font-family: Garamond;
+	font-size: 30px;
+	text-align: left;
+	color: #006C63;
+}
+.tabs{
+	font-family: Garamond;
+	text-align: right;
+	border-radius: 10px;
+	color: #01796F;
+	height: 40px;
+	font-size: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-decoration: none;
+}
+
+}
+.footer{
+	font-family: Helvetica;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+#posts{
+	border-radius: 10px;
+	margin-left: 80px;
+	margin-right: 80px;
+	text-align: center;
+	position: center;
+	height: 500px;
+	font-size: 20px;
+	background-color: #EAEAEA;
+}
+
+	
