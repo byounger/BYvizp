@@ -1,14 +1,17 @@
 /* this is a custom CSS stylesheet*/
 .containerh{
 	background-color:#7caaff;
-	height: 60px;
+	height: 300px;
+	font-family: Helvetica;
 }
 
 .row{
 	font-family: Helvetica;
-	font-size: 30px;
-	text-align: left;
-	color: #006C63;
+	font-size: 80px;
+	text-align: leftr;
+	color: #ffffff;
+	margin-left: 30px;
+	margin-right: 80px;
 }
 
 #posts{
@@ -38,7 +41,7 @@
 	text-align: left;
 	border-radius: 5px;
 	color: #a4a4a4;
-	font-size: 50px;
+	font-size: 45px;
 	margin-left: 25px;
 	margin-right: 25px;
 	text-decoration: none;
