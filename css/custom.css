@@ -1,7 +1,7 @@
 /* this is a custom CSS stylesheet*/
 .containerh{
-	opacity: .7;
-	filter: alpha(opacity=70);
+	opacity: .1;
+	filter: alpha(opacity=10);
 	background-color:#1d5bcc;
 	height: 300px;
 	font-family: Helvetica;
