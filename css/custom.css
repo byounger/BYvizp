@@ -4,11 +4,11 @@
 	filter: alpha(opacity=60);
 	background-color:#1d5bcc;
 	height: 300px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Helvetica Neue;
 }
 
 .rowh{
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Sketch_Block;
 	font-size: 70px;
 	text-align: leftr;
 	color: #ffffff;
