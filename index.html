@@ -15,63 +15,84 @@
 </head>
 
 <body>
-	<!-- Top fixed header-->
-	<nav class="navbar navbar-default" role="navigation" style="height:5px">
-	<div class="containerh">
-	  <header class="rowh">
-	  	<div class="col-xs-4">
-				<p style="font-size: 20px"></p>
+	<!-- Top header-->
+<nav class="navbar navbar-default" role="navigation" style="height:5px">
+	<div class="container-fluid">
+		<div class="containerh">
+		  <header class="rowh">
+			<div class="row">
+				<div class="col-xs-3 col-md-4 col-md-offset-4">
+					 <div class="input-group" style="margin-top: 10px">
+						  <input type="text" class="form-control">
+						  <span class="input-group-btn">
+							<button class="btn btn-default" type="button">Go!</button>
+						  </span>
+						</div>
+				</div>
+				<div class="col-xs-3 col-md-4 col-md-offset-4">
+					<div class="panel-group" id="accordion">
+						<div class="rowh">
+							<div class="panel-heading" style="text-align: left">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+								  <strong>...</strong>
+								</a>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse in">
+							  <div class="panel-body">
+									<div class="col-xs-3 col-md-4">
+											<h1 class="rowh">
+											overview//
+												<p style="font-size: 10px"></p>
+												<p style="font-size: 25px"> This is the main page of the project site. The banner below is meant to link to updates and Google + posts about
+												the thoughts, data, and inspirations that will shape the final project. 
+												The site is still under <strong>construction</strong>!!!</p>
+											</h1>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		 </header>
 		</div>
-		<div class="col-xs-4">
-				<p style="font-size: 20px"></p>
-		</div>
-		<div class="col-xs-4" style="text-align: right">
-			 <div class="input-group" style="margin-top: 10px">
-			      <input type="text" class="form-control">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button">Go!</button>
-			      </span>
-			    </div>
-		</div>
-		<div class="col-xs-12">
-				<h1 class="rowh">
-				overview//
-					<p style="font-size: 10px"></p>
-					<p style="font-size: 25px"> This is the main page of the project site. The banner below is meant to link to updates and Google + posts about
-					the thoughts, data, and inspirations that will shape the final project. 
-					The site is still under <strong>construction</strong>!!!</p>
-				</h1>
-		</div>
-		<div class="col-xs-12">
-				<h1 class="rowh">
-				</h1>
-		</div>
-	  </header>
 	</div>
-	</nav>	
-<br></br>
-	<div id="overview">
-		<div class="col-xs-12">
-				<p><strong></strong></p>
-		</div>
-	</div>
+</nav>	
+<br></br><br></br><br></br><br></br>
+	<div class="container">
 		<div id="posts">
-			<div class="col-xs-12">
-			<br></br><br></br>
-				 
-			 </div>
-		 </div>
-			
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-8">
+								 
+				 </div>
+				 <div class="col-xs-6 col-sm-4">
+									 
+				 </div>
+			</div>
+			<div class="row">
+				 <div class="col-xs-6 col-sm-4">
+								 
+				 </div>
+				 <div class="col-xs-6 col-sm-4">
+									 
+				 </div>
+				 <div class="col-xs-6 col-sm-4">
+								 
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<br></br><br></br>
-	<nav class="navbar navbar-default" role="navigation"style="height:450px">
-	  <div class="container-fluid">
-	  <br></br>
-		<div class="col-xs-4">
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	  <div class="row">
+			<div class="col-xs-6 col-sm-4">
 				<div class="bio">
 				<p> bio// </p>	
 				</div>
-		</div>
-	  	<div class="col-xs-4">
+			</div>
+			<div class="col-xs-6 col-sm-4">
 				<div class="footerbt">
 					<button type="button" class="btn btn-default btn-lg">
 						<a href="http://localhost/BookExs/D3Template.html" style="color: #2ec089"> 
@@ -84,7 +105,8 @@
 						Visualization for the Web</em></a> visualizing different examples and assignments.</p>
 					</div>
 				</div>
-				<br></br><br></br><br></br><br></br>
+			</div>
+			<div class="col-xs-6 col-sm-4">
 				<div class="footerbt">
 					<button type="button" class="btn btn-default btn-lg
 						<a href="https://plus.google.com/u/0/116865405037969161840/posts" style="color: #2ec089">
@@ -96,8 +118,10 @@
 						<p></p>
 					</div>
 				</div>
+			</div>
 		</div>
-		<div class="col-xs-4">
+		<div class="row">
+			<div class="col-xs-2 col-sm-4 col-sm-offset-4">
 				<div class="footerbt">
 					<button type="button" class="btn btn-default btn-lg">
 						<a href="https://plus.google.com/u/0/116865405037969161840/posts"style="color: #2ec089">
@@ -109,7 +133,8 @@
 						<p> Provide comments and feedback about assignments or project posts.</p>
 					</div>
 				</div>
-				<br></br><br></br><br></br><br></br>
+			</div>
+			<div class="col-xs-2 col-sm-2 col-sm-offset-1">
 				<div class="footerbt">
 					<button type="button" class="btn btn-default btn-lg"style="color: #2ec089">
 						<span class="glyphicon glyphicon-stats"></span> 
@@ -120,8 +145,10 @@
 						<p></p>
 					</div>
 				</div>
+			</div>
 		</div>
-	  </div>
+		</div>
+	</nav>
 
 		
 	<!-- javascript -->
