@@ -1,5 +1,6 @@
 /* this is a custom CSS stylesheet*/
 .containerh{
+	opacity: .4;
 	background-color:#1d5bcc;
 	height: 300px;
 	font-family: Helvetica;
