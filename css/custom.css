@@ -54,6 +54,7 @@
 
 
 .footerbt{
+	font-family: 'Sketch_Block', fallback, Helvetica;
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 5px;
