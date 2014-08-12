@@ -6,13 +6,13 @@
 	font-family: Helvetica;
 }
 @font-face{
-	font-family: "Sketch_block";
+	font-family: "sketch_block";
 	src: url('Sketch_Block.woff'),
 		 url('Sketch_Block.ttf');
 }
 		 
 .rowh{
-	font-family: 'Sketch_Block', fallback, Helvetica;
+	font-family: 'sketch_Block', fallback, Helvetica;
 	font-size: 70px;
 	text-align: left;
 	color: #ffffff;
@@ -42,7 +42,7 @@
 	margin-right: 40px;
 }
 .bio{
-	font-family: 'Sketch_Block', fallback, Helvetica;
+	font-family: 'sketch_Block', fallback, Helvetica;
 	text-align: left;
 	border-radius: 5px;
 	color: #a4a4a4;
@@ -54,7 +54,7 @@
 
 
 .footerbt{
-	font-family: 'Sketch_Block', fallback, Helvetica;
+	font-family: 'sketch_Block', fallback, Helvetica;
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 5px;
