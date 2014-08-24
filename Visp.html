@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charsets="utf-8">
+		<title>Project Draft</title>
+		<link href="css/custom.css" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+	 <div class="path">
+		<div class ="row">
+			<div class ="col-xs-2 col-md-2">
+			 <script type="text/javascript">
+				var m = [ 10, 10, 10, 10 ];
+				var w = 250 - m[1] - m[3];
+				var h = 50 - m[0] - m[2];
+				var svg = d3.select("body")
+							.append("svg")
+							.attr("width", w)
+							.attr("height", h);
+				var dataset;
+					d3.json("DCNeighborhoodv3.json", function(data) {
+						console.log(data);
+					})
+				var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
+					
+			 </script>
+			</div>
+		</div>
+	 </div>	
+	
+	</body>
+</html>
