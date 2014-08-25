@@ -1,0 +1,121 @@
+GIS_ID,Neighborhood Locations,Neighborhoods,CLUSTER,TotPop,PctBlackNonHispBridge,PctWhiteNonHispBridge,PctHisp,PctAsianPINonHispBridge,Total%Pop,PctUnemployed,AvgFamilyIncAdj,NumOccupiedHsgUnits,PctOwnerOccupiedHsgUnits,PctPoorPersons,Rate of Violent Crimes,Property Crimes,Year
+Nbclus_001,Northwest,"Kalorama Heights, Adams Morgan, Lanier Heights",Cluster 1,18338,0.11,0.69,0.13,0.068,0.998,0.054,162891,10992,0.38,0.056,8.9,36,1/1/2010
+Nbclus_001,Northwest,"Kalorama Heights, Adams Morgan, Lanier Heights",Cluster 1,18167,0.18,0.6,0.16,0.062,1.002,0.027,160609,10979,0.34,0.1,9,52,1/1/2000
+Nbclus_001,Northwest,"Kalorama Heights, Adams Morgan, Lanier Heights",Cluster 1 ,17812,0.26,0.56,0.15,0.025,0.995,0.036,121128,10279,0.31,0.1,,,1/1/1990
+Nbclus_010,Northwest,"Hawthorne, Barnaby Woods, Chevy Chase",Cluster 10,11986,0.11,0.77,0.062,0.054,0.996,0.02,254541,4967,0.74,0.037,0.8,15,1/1/2010
+Nbclus_010,Northwest,"Hawthorne, Barnaby Woods, Chevy Chase",Cluster 10,12724,0.11,0.78,0.045,0.05,0.985,0.025,215973,4914,0.72,0.048,1.3,19,1/1/2000
+Nbclus_010,Northwest,"Hawthorne, Barnaby Woods, Chevy Chase",Cluster 10,11510,0.094,0.84,0.03,0.03,0.994,0.026,177236,4839,0.69,0.036,,,1/1/1990
+Nbclus_011,Northwest,"Friendship Heights, American University Park, Tenleytown",Cluster 11,12216,0.056,0.8,0.067,0.076,0.999,0.02,215289,4846,0.78,0.058,4,45,1/1/2010
+Nbclus_011,Northwest,"Friendship Heights, American University Park, Tenleytown",Cluster 11,10490,0.048,0.84,0.048,0.054,0.99,0.022,241494,4402,0.77,0.035,5.3,56,1/1/2000
+Nbclus_011,Northwest,"Friendship Heights, American University Park, Tenleytown",Cluster 11,10735,0.039,0.86,0.053,0.042,0.994,0.028,187529,4345,0.72,0.065,,,1/1/1990
+Nbclus_012,Northwest,"North Cleveland Park, Forest Hills, Van Ness",Cluster 12,15550,0.071,0.75,0.075,0.1,0.996,0.036,217847,9170,0.36,0.087,1.6,17,1/1/2010
+Nbclus_012,Northwest,"North Cleveland Park, Forest Hills, Van Ness",Cluster 12,14953,0.07,0.79,0.068,0.07,0.998,0.017,220225,9263,0.37,0.062,2.5,30,1/1/2000
+Nbclus_012,Northwest,"North Cleveland Park, Forest Hills, Van Ness",Cluster 12,14978,0.06,0.82,0.072,0.042,0.994,0.016,196873,9134,0.36,0.042,,,1/1/1990
+Nbclus_013,Northwest,"Spring Valley, Palisades, Wesley Heights, Foxhall Crescent, Foxhall Village, Georgetown Reservoir",Cluster 13,18558,0.044,0.8,0.072,0.078,0.994,0.058,297054,6757,0.68,0.083,0.5,14,1/1/2010
+Nbclus_013,Northwest,"Spring Valley, Palisades, Wesley Heights, Foxhall Crescent, Foxhall Village, Georgetown Reservoir",Cluster 13,18708,0.05,0.81,0.062,0.069,0.991,0.32,311035,6930,0.68,0.072,0.9,20,1/1/2000
+Nbclus_013,Northwest,"Spring Valley, Palisades, Wesley Heights, Foxhall Crescent, Foxhall Village, Georgetown Reservoir",Cluster 13,17418,0.037,0.87,0.053,0.044,1.004,0.023,275447,6424,0.66,0.071,,,1/1/1990
+Nbclus_014,Northwest,"Cathedral Heights, McLean Gardens, Glover Park",Cluster 14,11713,0.059,0.76,0.09,0.085,0.994,0.031,157349,7533,0.44,0.079,0.4,14,1/1/2010
+Nbclus_014,Northwest,"Cathedral Heights, McLean Gardens, Glover Park",Cluster 14,11142,0.065,0.75,0.097,0.079,0.991,0.031,136135,7498,0.35,0.13,2.2,22,1/1/2000
+Nbclus_014,Northwest,"Cathedral Heights, McLean Gardens, Glover Park",Cluster 14,11432,0.054,0.78,0.11,0.057,1.001,0.026,160519,7456,0.33,0.078,,,1/1/1990
+Nbclus_015,Northwest,"Cleveland Park, Woodley Park, Massachusetts Avenue Heights, Woodland-Normanstone Terrace",Cluster 15,12829,0.044,0.8,0.076,0.074,0.994,0.025,291000,6585,0.45,0.089,2.5,28,1/1/2010
+Nbclus_015,Northwest,"Cleveland Park, Woodley Park, Massachusetts Avenue Heights, Woodland-Normanstone Terrace",Cluster 15,12306,0.077,0.8,0.067,0.052,0.996,0.017,278572,6329,0.47,0.047,3.1,45,1/1/2000
+Nbclus_015,Northwest,"Cleveland Park, Woodley Park, Massachusetts Avenue Heights, Woodland-Normanstone Terrace",Cluster 15,12386,0.058,0.82,0.083,0.034,0.995,0.026,257177,6277,0.42,0.045,,,1/1/1990
+Nbclus_016,Northwest,"Colonial Village, Shepherd Park, North Portal Estates",Cluster 16,3957,0.69,0.24,0.051,0.018,0.999,0.035,180800,1620,0.88,0.038,4.8,35,1/1/2010
+Nbclus_016,Northwest,"Colonial Village, Shepherd Park, North Portal Estates",Cluster 16,4030,0.72,0.2,0.049,0.013,0.982,0.039,184793,1633,0.9,0.049,5,37,1/1/2000
+Nbclus_016,Northwest,"Colonial Village, Shepherd Park, North Portal Estates",Cluster 16,4485,0.72,0.25,0.09,0.015,1.075,0.038,178706,1624,0.9,0.024,,,1/1/1990
+Nbclus_017,Northwest,"Takoma, Brightwood, Manor Park",Cluster 17,19455,0.68,0.11,0.18,0.019,0.989,0.12,81956,8067,0.49,0.13,7.7,32,1/1/2010
+Nbclus_017,Northwest,"Takoma, Brightwood, Manor Park",Cluster 17,18441,0.8,0.062,0.13,0.007,0.999,0.067,87110,7822,0.52,0.12,9.1,39,1/1/2000
+Nbclus_017,Northwest,"Takoma, Brightwood, Manor Park",Cluster 17,19428,0.86,0.066,0.053,0.011,0.99,0.06,89758,8108,0.51,0.076,,,1/1/1990
+Nbclus_018,Northwest,"Brightwood Park, Crestwood, Petworth",Cluster 18,39924,0.61,0.13,0.24,0.018,0.998,0.13,88437,14960,0.54,0.14,13,31,1/1/2010
+Nbclus_018,Northwest,"Brightwood Park, Crestwood, Petworth",Cluster 18,39233,0.77,0.054,0.16,0.009,0.993,0.08,85492,14688,0.56,0.15,12,41,1/1/2000
+Nbclus_018,Northwest,"Brightwood Park, Crestwood, Petworth",Cluster 18,40551,0.88,0.058,0.048,0.005,0.991,0.075,81213,15084,0.56,0.1,,,1/1/1990
+Nbclus_019,Northeast,"Lamond Riggs, Queens Chapel, Fort Totten, Pleasant Hill",Cluster 19,13206,0.7,0.17,0.11,0.016,0.996,0.091,75912,5101,0.53,0.14,6.4,26,1/1/2010
+Nbclus_019,Northeast,"Lamond Riggs, Queens Chapel, Fort Totten, Pleasant Hill",Cluster 19,12069,0.79,0.16,0.021,0.021,0.992,0.2,78880,4887,0.52,0.1,5.9,26,1/1/2000
+Nbclus_019,Northeast,"Lamond Riggs, Queens Chapel, Fort Totten, Pleasant Hill",Cluster 19,13768,0.8,0.16,0.02,0.009,0.989,0.072,80709,5010,0.5,0.075,,,1/1/1990
+Nbclus_002,Northwest,"Columbia Heights, Mt. Pleasant, Pleasant Plains, Park View",Cluster 2,47378,0.38,0.31,0.27,0.044,1.004,0.08,87204,19514,0.32,0.17,13,42,1/1/2010
+Nbclus_002,Northwest,"Columbia Heights, Mt. Pleasant, Pleasant Plains, Park View",Cluster 2,46779,0.53,0.13,0.3,0.032,0.992,0.097,63766,17458,0.26,0.26,16,43,1/1/2000
+Nbclus_002,Northwest,"Columbia Heights, Mt. Pleasant, Pleasant Plains, Park View",Cluster 2,45728,0.66,0.11,0.21,0.016,0.996,0.086,56232,17275,0.26,0.24,,,1/1/1990
+Nbclus_020,Northeast,"North Michigan Park, Michigan Park, University Heights",Cluster 20,8875,0.81,0.12,0.045,0.015,0.99,0.16,87062,3712,0.76,0.11,7,28,1/1/2010
+Nbclus_020,Northeast,"North Michigan Park, Michigan Park, University Heights",Cluster 20,9576,0.86,0.095,0.04,0.006,1.001,0.091,90087,3758,0.79,0.087,7.1,28,1/1/2000
+Nbclus_020,Northeast,"North Michigan Park, Michigan Park, University Heights",Cluster 20,9718,0.84,0.14,0.015,0.007,1.002,0.048,101989,3786,0.79,0.044,,,1/1/1990
+Nbclus_021,Northeast,"Edgewood, Bloomingdale, Truxton Circle, Eckington",Cluster 21,19481,0.7,0.2,0.07,0.023,0.993,0.14,91520,8073,0.49,0.17,14,39,1/1/2010
+Nbclus_021,Northeast,"Edgewood, Bloomingdale, Truxton Circle, Eckington",Cluster 21,18429,0.92,0.04,0.037,0.002,0.999,0.15,62996,7018,0.45,0.23,19,43,1/1/2000
+Nbclus_021,Northeast,"Edgewood, Bloomingdale, Truxton Circle, Eckington",Cluster 21,20862,0.9,0.071,0.018,0.006,0.995,0.11,66251,7550,0.44,0.17,,,1/1/1990
+Nbclus_022,Northeast,"Brookland, Brentwood, Langdon",Cluster 22,8459,0.78,0.14,0.061,0.015,0.996,0.12,81931,3284,0.58,0.23,15,60,1/1/2010
+Nbclus_022,Northeast,"Brookland, Brentwood, Langdon",Cluster 22,8906,0.88,0.073,0.026,0.008,0.987,0.12,77515,3250,0.57,0.21,21,67,1/1/2000
+Nbclus_022,Northeast,"Brookland, Brentwood, Langdon",Cluster 22,10065,0.89,0.082,0.017,0.007,0.996,0.1,71219,3620,0.53,0.16,,,1/1/1990
+Nbclus_023,Northeast,"Ivy City, Arboretum, Trinidad, Carver Langston",Cluster 23,14510,0.87,0.071,0.041,0.01,0.992,0.21,48388,5973,0.26,0.32,22,51,1/1/2010
+Nbclus_023,Northeast,"Ivy City, Arboretum, Trinidad, Carver Langston",Cluster 23,13909,0.92,0.051,0.013,0.009,0.993,0.18,49107,5559,0.28,0.31,34,62,1/1/2000
+Nbclus_023,Northeast,"Ivy City, Arboretum, Trinidad, Carver Langston",Cluster 23,17270,0.96,0.031,0.004,0.003,0.998,0.11,50306,7021,0.23,0.23,,,1/1/1990
+Nbclus_024,Northeast,"Woodridge, Fort Lincoln, Gateway",Cluster 24,11723,0.87,0.055,0.058,0.012,0.995,0.16,97305,4919,0.59,0.13,9.5,51,1/1/2010
+Nbclus_024,Northeast,"Woodridge, Fort Lincoln, Gateway",Cluster 24,11348,0.94,0.022,0.028,0.008,0.998,0.12,85450,4865,0.62,0.15,14,61,1/1/2000
+Nbclus_024,Northeast,"Woodridge, Fort Lincoln, Gateway",Cluster 24,11876,0.94,0.036,0.009,0.002,0.987,0.087,83898,4808,0.64,0.11,,,1/1/1990
+Nbclus_025,Northeast,"NoMa, Union Station, Stanton Park, Kingman Park",Cluster 25,29295,0.43,0.49,0.043,0.032,0.995,0.069,129089,13541,0.53,0.14,12,48,1/1/2010
+Nbclus_025,Northeast,"NoMa, Union Station, Stanton Park, Kingman Park",Cluster 25,27370,0.67,0.29,0.025,0.015,1,0.094,89673,12558,0.5,0.17,22,63,1/1/2000
+Nbclus_025,Northeast,"NoMa, Union Station, Stanton Park, Kingman Park",Cluster 25,30458,0.7,0.27,0.018,0.006,0.994,0.081,84050,12460,0.48,0.14,,,1/1/1990
+Nbclus_026,Southeast,"Capitol Hill, Lincoln Park",Cluster 26,20909,0.35,0.56,0.052,0.034,0.996,0.04,186314,8324,0.57,0.06,7.3,38,1/1/2010
+Nbclus_026,Southeast,"Capitol Hill, Lincoln Park",Cluster 26,18489,0.46,0.48,0.031,0.024,0.995,0.048,131428,8221,0.52,0.13,11,52,1/1/2000
+Nbclus_026,Southeast,"Capitol Hill, Lincoln Park",Cluster 26,19849,0.51,0.46,0.017,0.013,1,0.045,117819,7637,0.51,0.1,,,1/1/1990
+Nbclus_027,Southeast,"Near Southeast, Navy Yard",Cluster 27,5705,0.46,0.44,0.055,0.047,1.002,0.14,77952,3172,0.34,0.34,13,51,1/1/2010
+Nbclus_027,Southeast,"Near Southeast, Navy Yard",Cluster 27,4633,0.89,0.072,0.03,0.005,0.997,0.22,37779,1974,0.17,0.5,40,135,1/1/2000
+Nbclus_027,Southeast,"Near Southeast, Navy Yard",Cluster 27,5040,0.85,0.13,0.008,0.007,0.995,0.15,43360,1891,0.17,0.42,,,1/1/1990
+Nbclus_028,Southeast,Historic Anacostia,Cluster 28,4876,0.97,0.013,0.009,0.002,0.994,0.17,34195,1864,0.21,0.44,25,38,1/1/2010
+Nbclus_028,Southeast,Historic Anacostia,Cluster 28,4873,0.97,0.021,0.004,0.002,0.997,0.22,39636,1726,0.26,0.38,24,45,1/1/2000
+Nbclus_028,Southeast,Historic Anacostia,Cluster 28,5689,0.96,0.029,0.008,0,0.997,0.14,44635,1974,0.24,0.33,,,1/1/1990
+Nbclus_029,Northeast,"Eastland Gardens, Kenilworth",Cluster 29,2445,0.97,0.007,0.015,0.003,0.995,0.16,42821,786,0.38,0.41,13,57,1/1/2010
+Nbclus_029,Northeast,"Eastland Gardens, Kenilworth",Cluster 29,2374,0.97,0.004,0.009,0.012,0.995,0.21,55983,722,0.43,0.28,20,37,1/1/2000
+Nbclus_029,Northeast,"Eastland Gardens, Kenilworth",Cluster 29,1341,0.99,0.013,0,0,1.003,0.088,85127,506,0.68,0.098,,,1/1/1990
+Nbclus_003,Northwest,"Howard University, Le Droit Park, Cardozo/Shaw",Cluster 3,12174,0.44,0.41,0.094,0.05,0.994,0.075,101583,5461,0.42,0.17,17,68,1/1/2010
+Nbclus_003,Northwest,"Howard University, Le Droit Park, Cardozo/Shaw",Cluster 3,10128,0.67,0.18,0.12,0.017,0.987,0.085,72581,3957,0.33,0.26,28,113,1/1/2000
+Nbclus_003,Northwest,"Howard University, Le Droit Park, Cardozo/Shaw",Cluster 3,10925,0.78,0.13,0.084,0.007,1.001,0.081,61652,4030,0.31,0.22,,,1/1/1990
+Nbclus_030,Northeast,"Mayfair, Hillbrook, Mahaning Heights",Cluster 30,6573,0.97,0.007,0.022,0.002,1.001,0.25,37659,2883,0.25,0.32,21,47,1/1/2010
+Nbclus_030,Northeast,"Mayfair, Hillbrook, Mahaning Heights",Cluster 30,6167,0.98,0.006,0.011,0.001,0.998,0.14,42978,2621,0.29,0.29,19,47,1/1/2000
+Nbclus_030,Northeast,"Mayfair, Hillbrook, Mahaning Heights",Cluster 30,6342,0.99,0.003,0.005,0,0.998,0.089,49502,2461,0.27,0.23,,,1/1/1990
+Nbclus_031,Northeast,"Deanwood, Burrville, Grant Park, Lincoln Heights, Fairmont Heights",Cluster 31,14500,0.96,0.008,0.025,0.002,0.995,0.22,51670,5473,0.39,0.34,27,64,1/1/2010
+Nbclus_031,Northeast,"Deanwood, Burrville, Grant Park, Lincoln Heights, Fairmont Heights",Cluster 31,14113,0.98,0.007,0.006,0.001,0.994,0.17,52080,5298,0.46,0.29,23,53,1/1/2000
+Nbclus_031,Northeast,"Deanwood, Burrville, Grant Park, Lincoln Heights, Fairmont Heights",Cluster 31,16056,0.98,0.004,0.008,0.002,0.994,0.11,52492,5761,0.44,0.28,,,1/1/1990
+Nbclus_032,Northeast,"River Terrace, Benning, Greenway, Fort Dupont",Cluster 32,13008,0.96,0.006,0.026,0.002,0.994,0.17,57825,5702,0.37,0.24,18,37,1/1/2010
+Nbclus_032,Northeast,"River Terrace, Benning, Greenway, Fort Dupont",Cluster 32,12493,0.97,0.004,0.012,0.002,0.988,0.13,48887,5522,0.31,0.25,20,49,1/1/2000
+Nbclus_032,Northeast,"River Terrace, Benning, Greenway, Fort Dupont",Cluster 32,14126,0.98,0.006,0.011,0.003,1,0.077,54481,6135,0.31,0.19,,,1/1/1990
+Nbclus_033,Northeast,"Capitol View, Marshall Heights, Benning Heights",Cluster 33,14888,0.96,0.008,0.025,0.002,0.995,0.19,53239,5866,0.4,0.22,17,32,1/1/2010
+Nbclus_033,Northeast,"Capitol View, Marshall Heights, Benning Heights",Cluster 33,15080,0.99,0.002,0.003,0.006,1.001,0.18,52133,5893,0.37,0.33,20,39,1/1/2000
+Nbclus_033,Northeast,"Capitol View, Marshall Heights, Benning Heights",Cluster 33,18877,0.99,0.004,0.002,0.001,0.997,0.11,55028,7018,0.32,0.23,,,1/1/1990
+Nbclus_034,Southeast,"Twining, Fairlawn, Randle Highlands, Penn Branch, Fort Davis Park, Dupont Park",Cluster 34,14963,0.96,0.02,0.016,0.003,0.999,0.18,70274,6597,0.5,0.21,13,36,1/1/2010
+Nbclus_034,Southeast,"Twining, Fairlawn, Randle Highlands, Penn Branch, Fort Davis Park, Dupont Park",Cluster 34,15536,0.97,0.018,0.01,0.003,1.001,0.13,77239,6719,0.49,0.16,16,49,1/1/2000
+Nbclus_034,Southeast,"Twining, Fairlawn, Randle Highlands, Penn Branch, Fort Davis Park, Dupont Park",Cluster 34,17404,0.95,0.042,0.005,0.001,0.998,0.064,77001,6928,0.48,0.1,,,1/1/1990
+Nbclus_035,Southeast,"Fairfax Village, Naylor Gardens, Hillcrest, Summit Park",Cluster 35,7688,0.93,0.046,0.019,0.004,0.999,0.13,72747,3871,0.43,0.17,13,35,1/1/2010
+Nbclus_035,Southeast,"Fairfax Village, Naylor Gardens, Hillcrest, Summit Park",Cluster 35,8025,0.93,0.049,0.014,0.004,0.997,0.078,77872,3883,0.44,0.15,14,49,1/1/2000
+Nbclus_035,Southeast,"Fairfax Village, Naylor Gardens, Hillcrest, Summit Park",Cluster 35,8756,0.85,0.12,0.024,0.007,1.001,0.034,80753,4093,0.46,0.11,,,1/1/1990
+Nbclus_036,Southeast,"Woodland/Fort Stanton, Garfield Heights, Knox Hill",Cluster 36,7572,0.98,0.008,0.012,0.002,1.002,0.2,45220,2725,0.19,0.45,16,28,1/1/2010
+Nbclus_036,Southeast,"Woodland/Fort Stanton, Garfield Heights, Knox Hill",Cluster 36,6395,0.99,0.006,0.002,0.003,1.001,0.22,37759,2347,0.15,0.47,27,27,1/1/2000
+Nbclus_036,Southeast,"Woodland/Fort Stanton, Garfield Heights, Knox Hill",Cluster 36,7473,0.97,0.016,0.014,0,1,0.15,41655,2394,0.091,0.35,,,1/1/1990
+Nbclus_037,Southeast,"Sheridan, Barry Farm, Buena Vista",Cluster 37,8071,0.97,0.007,0.017,0.002,0.996,0.23,38015,2851,0.17,0.41,22,41,1/1/2010
+Nbclus_037,Southeast,"Sheridan, Barry Farm, Buena Vista",Cluster 37,8596,0.99,0.007,0.002,0.003,1.002,0.26,31957,2745,0.15,0.46,25,34,1/1/2000
+Nbclus_037,Southeast,"Sheridan, Barry Farm, Buena Vista",Cluster 37,8235,1,0.001,0.001,0.001,1.003,0.14,41880,2643,0.17,0.34,,,1/1/1990
+Nbclus_038,Southeast," Douglass, Shipley Terrace",Cluster 38,9710,0.98,0.006,0.013,0.002,1.001,0.21,38427,3628,0.14,0.38,20,40,1/1/2010
+Nbclus_038,Southeast," Douglass, Shipley Terrace",Cluster 38,9058,0.99,0.001,0.008,0.002,1.001,0.28,36226,3196,0.13,0.46,21,29,1/1/2000
+Nbclus_038,Southeast," Douglass, Shipley Terrace",Cluster 38,9532,0.99,0.001,0.002,0.002,0.995,0.16,39479,3372,0.12,0.35,,,1/1/1990
+Nbclus_039,Southeast,"Congress Heights, Bellevue, Washington Highlands",Cluster 39,30959,0.97,0.008,0.014,0.002,0.994,0.25,41605,12474,0.26,0.36,22,48,1/1/2010
+Nbclus_039,Southeast,"Congress Heights, Bellevue, Washington Highlands",Cluster 39,30583,0.97,0.01,0.008,0.006,0.994,0.2,47873,11577,0.24,0.34,26,36,1/1/2000
+Nbclus_039,Southeast,"Congress Heights, Bellevue, Washington Highlands",Cluster 39,36478,0.98,0.011,0.004,0.001,0.996,0.13,47805,13379,0.2,0.27,,,1/1/1990
+Nbclus_004,Northwest,"Georgetown, Burleith/Hillandale",Cluster 4,20464,0.037,0.81,0.064,0.084,0.995,0.029,304995,7375,0.55,0.11,5,41,1/1/2010
+Nbclus_004,Northwest,"Georgetown, Burleith/Hillandale",Cluster 4,18741,0.037,0.85,0.042,0.066,0.995,0.021,272708,7446,0.52,0.15,6.6,54,1/1/2000
+Nbclus_004,Northwest,"Georgetown, Burleith/Hillandale",Cluster 4,17919,0.041,0.86,0.056,0.044,1.001,0.024,228758,7004,0.48,0.16,,,1/1/1990
+Nbclus_005,Northwest,"West End, Foggy Bottom, GWU",Cluster 5,16160,0.067,0.75,0.057,0.12,0.994,0.036,211064,6413,0.31,0.29,3,22,1/1/2010
+Nbclus_005,Northwest,"West End, Foggy Bottom, GWU",Cluster 5,11723,0.061,0.75,0.053,0.13,0.994,0.28,259442,5811,0.29,0.28,3.8,54,1/1/2000
+Nbclus_005,Northwest,"West End, Foggy Bottom, GWU",Cluster 5,11104,0.051,0.82,0.047,0.072,0.99,0.043,224514,5787,0.3,0.21,,,1/1/1990
+Nbclus_006,Northwest,"Dupont Circle, Connecticut Avenue/K Street",Cluster 6,17318,0.077,0.73,0.082,0.11,0.999,0.034,177893,11413,0.32,0.13,13,89,1/1/2010
+Nbclus_006,Northwest,"Dupont Circle, Connecticut Avenue/K Street",Cluster 6,16930,0.091,0.72,0.092,0.086,0.989,0.025,162208,11607,0.3,0.11,17,172,1/1/2000
+Nbclus_006,Northwest,"Dupont Circle, Connecticut Avenue/K Street",Cluster 6,16216,0.14,0.65,0.15,0.061,1.001,0.026,121160,10491,0.28,0.11,,,1/1/1990
+Nbclus_007,Northwest," Shaw, Logan Circle",Cluster 7,23895,0.29,0.48,0.15,0.078,0.998,0.049,123697,13475,0.34,0.12,12,40,1/1/2010
+Nbclus_007,Northwest," Shaw, Logan Circle",Cluster 7,20865,0.5,0.25,0.18,0.059,0.989,0.082,67097,10512,0.23,0.25,16,54,1/1/2000
+Nbclus_007,Northwest," Shaw, Logan Circle",Cluster 7,19867,0.65,0.22,0.095,0.027,0.992,0.097,59733,9179,0.18,0.25,,,1/1/1990
+Nbclus_008,Northwest,"Downtown, Chinatown, Penn Quarters, Mount Vernon Square, North Capitol Street",Cluster 8,13560,0.37,0.43,0.059,0.14,0.999,0.12,142881,7543,0.28,0.26,19,93,1/1/2010
+Nbclus_008,Northwest,"Downtown, Chinatown, Penn Quarters, Mount Vernon Square, North Capitol Street",Cluster 8,8609,0.71,0.16,0.042,0.081,0.993,0.2,56782,3831,0.093,0.33,54,312,1/1/2000
+Nbclus_008,Northwest,"Downtown, Chinatown, Penn Quarters, Mount Vernon Square, North Capitol Street",Cluster 8,8300,0.77,0.12,0.022,0.084,0.996,0.15,41013,3135,0.049,0.36,,,1/1/1990
+Nbclus_009,Southwest,"Southwest Employment Area, Southwest/Waterfront, Fort McNair, Buzzard Point",Cluster 9,11588,0.56,0.33,0.052,0.052,0.994,0.079,94339,6787,0.42,0.19,9.4,34,1/1/2010
+Nbclus_009,Southwest,"Southwest Employment Area, Southwest/Waterfront, Fort McNair, Buzzard Point",Cluster 9,11779,0.67,0.25,0.043,0.024,0.987,0.093,66086,6965,0.33,0.22,17,67,1/1/2000
+Nbclus_009,Southwest,"Southwest Employment Area, Southwest/Waterfront, Fort McNair, Buzzard Point",Cluster 9,11592,0.6,0.34,0.028,0.021,0.989,0.086,86937,6361,0.37,0.2,,,1/1/1990
+,,n/a,NonCluster- area,7244,0.48,0.4,0.077,0.037,0.994,0.12,64548,2410,0.14,0.22,8.8,41,1/1/2010
+,,n/a,NonCluster- area,8289,0.45,0.43,0.082,0.035,0.997,0.21,73946,1954,0.1,0.15,9.3,66,1/1/2000
+,,n/a,NonCluster- area,15299,0.43,0.49,0.048,0.03,0.998,0.11,67456,2355,0.068,0.11,,,1/1/1990
