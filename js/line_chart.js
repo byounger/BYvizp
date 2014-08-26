@@ -59,7 +59,7 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline(d.values));
+		.attr("d", valueline(d.PctBlack));
 });
 
 var dataNest = d3.nest()
@@ -70,7 +70,7 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline2(d.values));
+		.attr("d", valueline2(d.PctWhite));
 });
 
 var dataNest = d3.nest()
@@ -81,7 +81,7 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline3(d.values));
+		.attr("d", valueline3(d.PctHisp));
 });
 
 var dataNest = d3.nest()
@@ -92,7 +92,7 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline4(d.values));
+		.attr("d", valueline4(d.Asian));
 });
 
 svg.append("g")
