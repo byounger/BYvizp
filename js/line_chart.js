@@ -1,4 +1,4 @@
-var margin = {top: 30, right: 20, bottom: 30, left: 50}'
+var margin = {top: 30, right: 20, bottom: 30, left: 50},
 	width = 600 - margin.left - margin.right,
 	height = 270 - margin.top - margin.bottom;
 
@@ -38,7 +38,7 @@ var svg = d3.select("body")
 			.attr("height", height + margin.top + margin.bottom)
 		.append("g")
 			.attr("transform",
-				"translate(" + margin.left + "," + margin.top + ")";
+				"translate(" + margin.left + "," + margin.top + ")");
 				
 	d3.csv("data/DC_NeighborhoodCluster_1.csv", function(error, data) {
 				data.forEach(function(d) {
