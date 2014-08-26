@@ -4,45 +4,16 @@
 		 <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>BY Project</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/custom.css" rel="stylesheet">
-		<script src="js/respond.js"></script>
-		<link href="css/custom.css" rel="stylesheet">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-		<link rel="
 		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	</head>
 	<body>
-	 <div class="path">
-		<div class ="row">
-			<div class ="col-xs-3 col-md-3">
-			 <div class ="simple_example">
-					<script type="text/javascript">
-						d3.csv("DC_NeighborhoodCluster_1.csv", function(d) {
-							year: new Date(+d.Year, 0, 1),
-							nlocations: d.nlocations,
-							Neighborhoods: d.Neighborhoods,
-							cluster: d.cluster,
-							TotPop: +d.TotPop,
-							PctBlack: +d.PctBlack,
-							PctWhite: +d.PctWhite,
-							PctHisp: +d.PctHisp,
-							PctAsian: +d.PctAsian,
-							};
-						}, function(error, rows) {
-							console.log(rows);
-						});
-						var sets = [{d.cluster, +d.PctBlack}, {d.cluster, +d.PctWhite}],
-							overlaps = [{sets: [0,1], size: 2}];
-							sets = venn.venn(sets, overlaps);
-							venn.drawD3Diagram(d3.select(".simple_example"), sets, 300, 300);
-					</script>
-			  </div>
+		<div class="body">
+		  <div class="path">
+			<div class="axis path, axis line">
+			<script type="text/javascript"> </script>
+			<script type="js/line_chart.js"></script>
 			</div>
+		  </div>
 		</div>
-	 </div>	
-	
 	</body>
 </html>

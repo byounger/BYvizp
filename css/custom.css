@@ -63,29 +63,25 @@
 }
 
 /*line chart style*/
+
+.body{ font: 12px Arial;}
+
 .path{
 	stroke: steelblue;
-	stroke-width: 1;
+	stroke-width: 2;
 	fill: none;
 }
 
-.axis{
+.axispath {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
 	shape-rendering: crispEdges;
 }
 
-.x.axis line{
-	stroke: lightgrey;
-}
-
-.x.axis .minor{
-	stroke-opacity: .5;
-}
-
-.x.axis path{
-	display: none;
-}
-
-.y.axis line, .y.axis path{
+.axisline {
 	fill: none;
-	stroke: lightgrey;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
 }

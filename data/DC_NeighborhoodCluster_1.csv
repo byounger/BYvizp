@@ -1,4 +1,4 @@
-Neighborhood Locations,Neighborhoods,CLUSTER,TotPop,PctBlackNonHispBridge,PctWhiteNonHispBridge,PctHisp,PctAsianPINonHispBridge,Total%Pop,PctUnemployed,AvgFamilyIncAdj,NumOccupiedHsgUnits,PctOwnerOccupiedHsgUnits,PctPoorPersons,Rate of Violent Crimes,Property Crimes,Year
+nlocations,Neighborhoods,cluster,TotPop,PctBlack,PctWhite,PctHisp,PctAsian,Total%Pop,PctUnemployed,AvgFamilyIncAdj,NumOccupiedHsgUnits,PctOwnerOccupiedHsgUnits,PctPoorPersons,Rate of Violent Crimes,Property Crimes,Year
 Northwest,"Kalorama Heights, Adams Morgan, Lanier Heights",Cluster 1,18338,0.11,0.69,0.13,0.068,0.998,0.054,162891,10992,0.38,0.056,8.9,36,2010
 Northwest,"Kalorama Heights, Adams Morgan, Lanier Heights",Cluster 1,18167,0.18,0.6,0.16,0.062,1.002,0.027,160609,10979,0.34,0.1,9,52,2000
 Northwest,"Kalorama Heights, Adams Morgan, Lanier Heights",Cluster 1 ,17812,0.26,0.56,0.15,0.025,0.995,0.036,121128,10279,0.31,0.1,,,1990
