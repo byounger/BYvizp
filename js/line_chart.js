@@ -62,6 +62,39 @@ dataNest.forEach (function(d) {
 		.attr("d", valueline(d.values));
 });
 
+var dataNest = d3.nest()
+	.key(function(d) { return d.symbol;})
+	.entries(data);
+
+dataNest.forEach (function(d) {
+
+	svg.append("path")
+		.attr("class", "line")
+		.attr("d", valueline2(d.values));
+});
+
+var dataNest = d3.nest()
+	.key(function(d) { return d.symbol;})
+	.entries(data);
+
+dataNest.forEach (function(d) {
+
+	svg.append("path")
+		.attr("class", "line")
+		.attr("d", valueline3(d.values));
+});
+
+var dataNest = d3.nest()
+	.key(function(d) { return d.symbol;})
+	.entries(data);
+
+dataNest.forEach (function(d) {
+
+	svg.append("path")
+		.attr("class", "line")
+		.attr("d", valueline4(d.values));
+});
+
 svg.append("g")
 	.attr("class", "x axis")
 	.attr("transform", "translate(0," + height + ")")
