@@ -52,14 +52,14 @@ x.domain(d3.extent(data, function(d) { return d.Year; }));
 y.domain([0, d3.max(data, function(d) { return d.PctBlack, d.PctWhite, d.PctHisp, d.PctAsian; })]);
 
 var dataNest = d3.nest()
-	.key(function(d) { return d.symbol;})
+	.key(function(d) { return d.PctBlack;})
 	.entries(data);
 
 dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline(d.PctBlack));
+		.attr("d", valueline(d.values));
 });
 
 var dataNest = d3.nest()
