@@ -52,14 +52,14 @@ x.domain(d3.extent(data, function(d) { return d.Year; }));
 y.domain([0, d3.max(data, function(d) { return d.PctBlack, d.PctWhite, d.PctHisp, d.PctAsian; })]);
 
 var dataNest = d3.nest()
-	.key(function(d) { return d.PctBlack;})
+	.key(function(d) { return d.symbol;})
 	.entries(data);
 
 dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline(data));
+		.attr("d", valueline(d.values));
 });
 
 var dataNest = d3.nest()
@@ -81,7 +81,7 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline3(d.PctHisp));
+		.attr("d", valueline3(d.values));
 });
 
 var dataNest = d3.nest()
@@ -92,7 +92,7 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline4(d.Asian));
+		.attr("d", valueline4(d.values));
 });
 
 svg.append("g")
