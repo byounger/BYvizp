@@ -59,18 +59,18 @@ dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline(d.values));
+		.attr("d", valueline(data));
 });
 
 var dataNest = d3.nest()
-	.key(function(d) { return d.symbol;})
+	.key(function(d) { return d.PctWhite;})
 	.entries(data);
 
 dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline2(d.PctWhite));
+		.attr("d", valueline2(data));
 });
 
 var dataNest = d3.nest()
