@@ -8,7 +8,7 @@ var x = d3.time.scale().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
 var xAxis = d3.svg.axis().scale(x)
-	.orient("top").ticks(5);
+	.orient("bottom").ticks(5);
 
 var yAxis = d3.svg.axis().scale(y)
 	.orient("left").ticks(5);
@@ -63,14 +63,14 @@ dataNest.forEach (function(d) {
 });
 
 var dataNest = d3.nest()
-	.key(function(d) { return d.PctWhite;})
+	.key(function(d) { return d.symbol;})
 	.entries(data);
 
 dataNest.forEach (function(d) {
 
 	svg.append("path")
 		.attr("class", "line")
-		.attr("d", valueline2(data));
+		.attr("d", valueline2(d.values));
 });
 
 var dataNest = d3.nest()
