@@ -1,0 +1,291 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+	<meta charset="utf-8">
+	<title> The Chocolate City </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <link href="css/joinedcircles.css" rel="stylesheet">
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
+  <!-- add font source www.k-type.com-->
+  
+  <style type="text/css">
+	
+	@font-face{
+		font-family: "SinkinSans";
+		src: url("fonts/SinkinSans-600SemiBold.ttf");
+		}
+	
+	body {
+		font: 'SinkinSans', fallback, arial;
+	}
+	
+	#map {
+		font-family: 'SinkinSans', fallback, arial;
+		position: fixed;
+		top: 0px;
+		bottom: 175px;
+		width: 100%;
+		z-index: -1;
+	}
+	
+	#title {
+		font-family: 'SinkinSans', fallback, arial;
+		color: #69340f;
+		font-size: 45px;
+		text-align: center;
+		margin-top: 5px;
+		z-index: 1;
+		}
+		
+	.navbar-fixed-top {
+		position:fixed;
+		}
+		
+	#indic{
+		font-family: 'SinkinSans', fallback, arial;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		color: #2a1506;
+		opacity: .8;
+		z-index: 2;
+		}
+	
+	
+	#vis {
+		background: #ffffff;
+		font-family: 'SinkinSans', fallback, arial;
+		text-align: center;
+		margin-top: 0px;
+		color: #7b7b7b;
+		z-index: -3;
+		}
+  </style>
+  </head> 
+ 
+ <body> 
+ <br /> 
+ <br />
+
+	<div class="container-fluid">
+	<div class="row">
+	
+		<div class="col-xs-12 col-md-12">
+			<h1 id="title">
+				 Washington, D.C.'s Blueprint & Economic Change
+				<p style="font-size: 25px" style="opacity: .9">A visual exploration of DC’s infrastructure, development, and neighborhood footprint from 1990-2010.</p>
+											
+			</h1>
+		</div>
+	 </div>
+	</div>
+
+	<div class="row">
+	<div class="container-fluid">
+		<div id = "map"></div>
+			<script>
+			// Provide your access token
+			L.mapbox.accessToken = 'pk.eyJ1IjoiYnlvdW5nZXIxNCIsImEiOiJrRm1fQ0tRIn0.oQFo_8PbIlEzrfjkD_Nyxg';
+			// Create a map in the div #map
+			var map = L.mapbox.map('map', 'byounger14.j949a7l9')
+				.setView([	38.909, -77.057], 12);
+			</script>
+		</div>
+	 </div>
+	</div>
+  
+<br></br><br></br><br></br><br></br>  
+<br></br><br></br><br></br><br></br>  
+<br></br><br></br><br></br><br></br>  
+<br></br><br></br><br></br><br></br>
+<br></br>
+
+	<nav class="navbar navbar-default" class="navbar-fixed-top" id="indic" role="navigation" >
+	<script type="text/javascript">
+	$(document).scroll(function(){
+		var elem = $('#indic');
+		if (!elem.attr('data-top')) {
+		if (elem.hasClass('navbar-fixed-top'))
+        return;
+		var offset = elem.offset()
+		elem.attr('data-top', offset.top);
+	}
+		if (elem.attr('data-top') <= $(this).scrollTop() )
+		elem.addClass('navbar-fixed-top');
+		else
+		elem.removeClass('navbar-fixed-top');
+	});
+	</script>
+	<div class="container-fluid">
+	<div class="row" id="indic">
+		<div class="col-xs-6 col-md-3">
+		</div>
+		<div class="col-xs-4 col-md-2">
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" style="font-size: 25px; color: #69340f">
+					INDICATORS
+					<span class="caret"></span>
+				</button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">DEMOGRAPHICS</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">WELLBEING</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">HOUSING</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#">EDUCATION</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="http://byounger.github.io/BYvizp/">ABOUT</a></li>
+					</ul>
+			</div>
+		</div>
+		<div class="col-xs-4 col-md-2">
+			<button type="button" class="btn btn-default" id="button081990" id="button061990" id="button071990" style="font-size: 25px; color: #69340f">1990
+			</button>
+		</div>
+		
+		<div class="col-xs-4 col-md-2">
+			<button type="button"  class="btn btn-default" id="button082000" id="button062000" id="button072000" style="font-size: 25px; color: #69340f">2000
+			</button>	
+		</div>
+		
+		<div class="col-xs-4 col-md-2">
+			<button type="button" class="btn btn-default" id="button082010" id="button062010" id="button072010" style="font-size: 25px; color: #69340f">2010
+			</button>
+		</div>
+
+	 </div>
+	</div>
+	</nav>
+</div>
+	
+	
+	<br></br><br></br><br></br>
+	<div class="row" id="vis">
+		<div class="container-fluid">
+		<div class="col-xs-12 col-md-12" style="height: 200px">
+		<br></br>
+			<h3> Racial Profiles </h3>
+				<p> Staring at 1990, each cluster of circles represent racial demographics within specific neighborhood groupings. </p>
+		</div>
+		</div>
+	</div>
+	<div class="row" id="vis">
+		<div class="container-fluid">
+		<div class="col-xs-1 col-md-1">
+		</div>
+		<div class="col-xs-3 col-md-2" id="area1">
+			<br></br><br></br>
+			<p style="opacity: .4">CLUSTER</p>
+			<div class="legend">
+			<script type="text/javascript"> 
+			var w = 230,
+				h = 405;
+ 
+			var svg = d3.select("#area1").append("svg:svg")
+						.attr("width", w)
+						.attr("height", h);
+			
+			svg.append("svg:circle")
+				.attr("cx", 100)
+				.attr("cy", 125)
+				.attr("r", 25)
+				.style("fill", "#f28f00")
+				.style("fill-opacity", ".4")
+				.append("title")
+				.text(function(d) { return "Black population:" + 25 + "%"; });
+ 
+			svg.append("svg:circle")
+				.attr("cx", 125)
+				.attr("cy", 100)
+				.attr("r", 25)
+				.style("fill", "#d21e2d")
+				.style("fill-opacity", ".4")
+				.append("title")
+				.text(function(d) { return "White population:" + 25 + "%"; });
+ 
+			svg.append("svg:circle")
+				.attr("cx", 125)
+				.attr("cy", 125)
+				.attr("r", 25)
+				.style("fill", "green")
+				.style("fill-opacity", ".4")
+				.append("title")
+				.text(function(d) { return "Hispanic population:" + 25 + "%"; });
+				
+			svg.append("svg:circle")
+				.attr("cx", 100)
+				.attr("cy", 100)
+				.attr("r", 25)
+				.style("fill", "#691ed2")
+				.style("fill-opacity", ".4")
+				.append("title")
+				.text(function(d) { return "Asian population:" + 25 + "%"; });
+			</script>
+			</div>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area2">
+			<br></br><br></br>
+			<p> Kalorama Heights, Adams Morgan, & Lanier Heights Neighborhoods</p>
+			<script src="js/clustervenn01.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area3">
+		<br></br><br></br>
+			<p> Columbia Heights, Mt. Pleasant, Pleasant Plains, & Park View Neighborhoods</p>
+			<script src="js/clustervenn02.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area4">
+		<br></br><br></br>
+			<p> Howard University, Le Droit Park, & Cardozo/Shaw Neighborhoods</p>
+			<script src="js/clustervenn03.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area5">
+		<br></br><br></br>
+			<p> Hawthorne, Barnaby Woods, & Chevy Chase Neighborhoods</p>
+			<script src="js/clustervenn10.js"></script>
+		</div>
+	</div>
+	</div>
+	<div class="row" id="vis">
+		<div class="container-fluid">
+		<div class="col-xs-1 col-md-1">
+		</div>
+		<div class="col-xs-3 col-md-2" id="area6">
+		<br></br><br></br>
+			<p> Georgetown & Burleith/Hillandale Neighborhoods</p>
+			<script src="js/clustervenn04.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area7">
+		<br></br><br></br>
+			<p> West End, Foggy Bottom, & GWU Neighborhoods</p>
+			<script src="js/clustervenn05.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area8">
+		<br></br><br></br>
+			<p> Dupont Circle & Connecticut Avenue/K Street Neighborhoods</p>
+			<script src="js/clustervenn06.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area9">
+		<br></br><br></br>
+			<p>  Shaw & Logan Circle Neighborhoods</p>
+			<script src="js/clustervenn07.js"></script>
+		</div>
+		
+		<div class="col-xs-3 col-md-2" id="area10">
+		<br></br><br></br>
+			<p> Downtown, Chinatown, Penn Quarters, Mount Vernon Square, & North Capitol Street Neighborhoods</p>
+			<script src="js/clustervenn08.js"></script>
+		</div>
+	</div>
+	</div>
+	
+  </body> 
+</html>

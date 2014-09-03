@@ -1,0 +1,20 @@
+.body {
+  font: 10px sans-serif;
+}
+
+.axispath,
+.axisline {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axispath {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.0px;
+}
