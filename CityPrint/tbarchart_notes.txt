@@ -1,0 +1,24 @@
+--barchart for treemap js---
+	d3.select("treemapdiv").attr("class", "node").on("click", function() {
+		var bar = chart2000.selectAll("g")
+			.data(treemap1.nodes)
+			.enter().append("g")
+			.attr("transform", function(d, i) { return "translate(0," + i * height + ")"; });
+		bar.append("rect")
+			.attr("width", function(d) { return x((d.size2000)); })
+			.attr("height", height - 1);
+			
+		bar.append("text")
+			.attr("x", function(d) { return x((d.size2000)*100) - 3; })
+			.attr("y", height / 2)
+			.attr("dy", ".35em")
+			.text(function(d) { return ((d.size2000)*100); });
+			
+		d3.select("treemapdiv").attr("class","node").on("click", function(){
+			var active = treemapdiv.active ? false:true,
+				newOpacity = active ? 0.5:1;
+			d3.select("treemapdiv").attr("class","node")
+				.style("opacity", newOpacity);
+				treemapdiv.active = active;
+			})
+--html--		

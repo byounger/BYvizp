@@ -1,0 +1,78 @@
+{ 
+	"neighborhood": "Shaw",
+	 "children": [
+	 {
+	 "totpop2000": 1000,
+		"children": [
+		{
+			"name": "demographic",
+			"children": [
+			{"name": "Black", "size2000":0.18},
+			{"name": "White", "size2000":0.6},
+			{"name": "Hispanic", "size2000":0.40},
+			{"name": "Asian", "size2000":0.10}
+			]
+			},
+		{
+			"name": "wellbeing",
+			"children": [
+			{"name": "Unemployment", "size2000":0.40},
+			{"name": "Poverty", "size2000":0.1},
+			{"name": "Without Education", "size2000":0.31}
+			]
+			},
+		{
+			"name": "crime",
+			"children": [
+			{"name": "Violent Crime", "size2000":0.09},
+			{"name": "Property Crime", "size2000":0.08}
+			]
+			},
+		{
+			"name": "housing",
+			"children": [
+			{"name": "Home Ownership", "size2000":0.34},
+			{"name": "Houses for Rent", "size2000":1.0}
+			]
+		},
+		{
+		"totpop2010": 1050,
+		"children": [
+		{
+			"name": "demographic", 
+			"children": [
+			{"name": "PctBlack", "size2010":0.19},
+			{"name": "PctWhite", "size2010":0.8},
+			{"name": "PctHisp", "size2010":0.20},
+			{"name": "PctAsian", "size2010":0.10}
+			]
+			},
+		{
+			"name": "wellbeing",
+			"children": [
+			{"name": "PctUnemployed", "size2010":0.04},
+			{"name": "PctPoorPersons", "size2010":0.2},
+			{"name": "Pct25andOverWoutHS", "size2010":0.31}
+			]
+			},
+		{
+			"name": "crime",
+			"children": [
+			{"name": "PctViolentCrimes", "size2010":0.10},
+			{"name": "PctPropertyCrimes", "size2010":0.50}
+			]
+			},
+		{
+			"name": "housing",
+			"children": [
+			{"name": "PctOwnerOccupiedHsgUnits", "size2010":0.30},
+			{"name": "PctVacantHsgUnitsForRent", "size2010":0.20}
+			]
+		}
+		]
+		}
+	]
+	}
+ ]
+ };
+  

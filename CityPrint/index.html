@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Raleway::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  
+<style>
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: auto;
+  position: relative;
+  width: 980px;
+  color: #808080;
+}
+
+form {
+  position: absolute;
+  left: 70px;
+  top: 50px;
+}
+
+.chart2000 rect {
+  border: solid 1.4px #808080;
+  fill: #808080;
+}
+
+.chart2000 text {
+   font: 8px "Raleway";
+   color: black;
+}
+
+.chart2010 rect {
+  border: solid 1.4px #808080;
+  fill: #808080;
+}
+
+.chart2010 text {
+   font: 8px "Raleway";
+   color: black;
+}
+	
+.node {
+  border: solid 1.5px white;
+  font: 10px "Raleway";
+  line-height: 15px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+</style>
+
+
+</head>
+<body>
+<h3 style="margin-left= 50px","left: 50px"> Test Neighborhood Indicator Map </h3>
+<div>
+<form>
+  <label><input type="radio" name="mode" value="2000" checked> 2000 /</label>
+  <label><input type="radio" name="mode" value="2010"> 2010</label>
+</form>
+<div id="treemap"></div>
+<br><br><br><br><br><br><br></br></br></br></br></br></br></br>
+<svg class="chart2000"></svg>
+<svg class="chart2010"></svg>
+<script>
+//color palette	
+var colorbrewer = {Spectral: {
+3: ["#fc8d59","#ffffbf","#99d594"],
+4: ["#ff00a9","#ee00ff","#00b1ff","#2b83ba"],
+5: ["#ff00a9","#ee00ff","#00b1ff","#00ff7d","#adff00"],
+6: ["#c7f464","#ecc03a","#c44d58","#e541a5","#5b2fb2","#45a6cc"],
+7: ["#d53e4f","#fc8d59","#fee08b","#ffffbf","#e6f598","#99d594","#3288bd"],
+8: ["#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd"],
+9: ["#d53e4f","#f46d43","#fdae61","#fee08b","#ffffbf","#e6f598","#abdda4","#66c2a5","#3288bd"],
+10: ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"],
+11: ["#9e0142","#d53e4f","#f46d43","#fdae61","#fee08b","#ffffbf","#e6f598","#abdda4","#66c2a5","#3288bd","#5e4fa2"]
+}};
+//selecting color palette
+var color = d3.scale.ordinal()
+    .domain(["foo", "bar", "baz"])
+    .range(colorbrewer.Spectral[6]);
+
+	</script>
+	<script src="js/treemapsbars.js"></script>
+	</body>
+</html>
