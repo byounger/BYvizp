@@ -61,7 +61,7 @@ d3.json("data/test.json", function(error, root) {
       .style("opacity", .9)
 	  .text(function(d) { return d.children ? null : d.name; });
 
-d3.selectAll("treemapdiv.node") {	  
+d3.selectAll("treemapdiv.node").on("click", function click() {		  
 	node2000
 			.on("click", function(node2000) {
 				console.log(node2000); });
