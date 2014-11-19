@@ -53,7 +53,7 @@ d3.json("data/test.json", function(error, root) {
 	  .text(function(d) { return d.children ? null : d.name; });
    
    var node2010 = treemapdiv.datum(root).selectAll(".node")
-      .data(treemap1.nodes)
+      .data(treemap2.nodes)
 		.enter().append("treemapdiv")
       .attr("class", "node")
       .call(position)
@@ -61,7 +61,7 @@ d3.json("data/test.json", function(error, root) {
       .style("opacity", .9)
 	  .text(function(d) { return d.children ? null : d.name; });
 
-d3.selectAll("treemapdiv.node").on("click", function click() {	  
+d3.selectAll("treemapdiv.node") {	  
 	node2000
 			.on("click", function(node2000) {
 				console.log(node2000); });
