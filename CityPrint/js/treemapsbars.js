@@ -43,7 +43,16 @@ var x = d3.scale.linear().range([0, width]),
 
 	
 d3.json("data/test.json", function(error, root) {
-  var node = treemapdiv.datum(root).selectAll(".node")
+  var node2000 = treemapdiv.datum(root).selectAll(".node")
+      .data(treemap1.nodes)
+		.enter().append("treemapdiv")
+      .attr("class", "node")
+      .call(position)
+      .style("background", function(d) { return d.children ? color(d.name) : null; })
+      .style("opacity", .9)
+	  .text(function(d) { return d.children ? null : d.name; });
+   
+   var node2010 = treemapdiv.datum(root).selectAll(".node")
       .data(treemap1.nodes)
 		.enter().append("treemapdiv")
       .attr("class", "node")
@@ -53,17 +62,17 @@ d3.json("data/test.json", function(error, root) {
 	  .text(function(d) { return d.children ? null : d.name; });
 
 d3.selectAll("treemapdiv.node").on("click", function click() {	  
-	node
-			.on("click", function(d) {
-				console.log(d); });
+	node2000
+			.on("click", function(node2000) {
+				console.log(node2000); });
 			
-			node.forEach(function type(d) {
+			node2000.forEach(function type(d) {
 		  d.value = +d.size2000; // coerce to number
 		  return d;
 		})
 	
 		var bar1 = chart2000.selectAll("g")
-			  .data(treemap1.nodes)
+			  .data(node2000)
 				.enter().append("g")
 				  .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
 
@@ -77,16 +86,16 @@ d3.selectAll("treemapdiv.node").on("click", function click() {
 				  .attr("dy", ".35em")
 				  .text(function(d) { return ((d.value)*100); });
 	
-	node
-			.on("click", function(d) {
-				console.log(d); });
+	node2010
+			.on("click", function(node2010) {
+				console.log(node2010); });
 			
-			node.forEach(function type(d) {
+			node2010.forEach(function type(d) {
 		  d.value = +d.size2010; // coerce to number
 		  return d;
 		})
 			var bar2 = chart2010.selectAll("g")
-			  .data(treemap1.nodes)
+			  .data(node2010)
 				.enter().append("g")
 				  .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
 
@@ -106,7 +115,7 @@ d3.selectAll("input").on("change", function change() {
 			? function() { return (1); }
 			: function(d) { return (d.size2000); };
 
-    node
+    node2000
         .data(treemap2.value(value1).nodes)
       .transition()
 	    .duration(1500)
@@ -116,7 +125,7 @@ d3.selectAll("input").on("change", function change() {
 		? function(d) { return (d.size2000); }
 		: function(d) { return (d.size2010); };
 		
-	node
+	node2000
 		.data(treemap1.value(value2).nodes)
 	  .transition()
 		.duration(1500)
