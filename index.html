@@ -8,161 +8,35 @@
     <link href="css/custom.css" rel="stylesheet">
 	<script src="js/respond.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<title>Demo: Explicit load of a embedded post</title>
-    <link rel="canonical" href="http://www.example.com" />
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["wordtree"]});
+      google.setOnLoadCallback(drawSimpleNodeChart);
+      function drawSimpleNodeChart() {
+        var data = google.visualization.arrayToDataTable(
+          [ ['Phrases'],
+['Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.']
+          ]
+        );
+
+        var options = {
+          wordtree: {
+            format: 'implicit',
+            type: 'double',
+            word: 'nation'
+          }
+        };
+
+        var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_double'));
+        wordtree.draw(data, options);
+      }
     </script>
+
 </head>
 
 <body>
-	<!-- Top header--
-	<div class="container-fluid">
-		<div class="containerh">
-		  <header class="rowh">
-			<div class="row">
-				
-				<nav class="navbar navbar-fixed-top" role="navigation">
-				<div class="col-xs-6 col-md-4 col-md-offset-8">
-					 <div class="input-group" style="margin-top: 10px">
-						  <input type="text" class="form-control">
-						  <span class="input-group-btn">
-							<button class="btn btn-default" type="button">Explore!</button>
-						  </span>
-						</div>
-				</div>
-				</nav>
-				
-			</div>
-			<div class="row">
-				<!--collaspe
-				<div class="col-xs-3 col-md-4 col-md-offset-4">
-					<div class="panel-group" id="accordion">
-						<div class="rowh">
-							<div class="panel-heading" style="text-align: left">
-								<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-								  <strong>...</strong>
-								</a>
-							</div>
-							<div id="collapseOne" class="panel-collapse collapse in">
-							  <div class="panel-body">
-							  
-									<div class="col-xs-12 col-md-12">
-											<h1 class="rowh">
-											project title
-												<br></br>
-												<p style="font-size: 25px"> This is the main page of the project site. The banner below is meant to link to updates and Google + posts about
-												the thoughts, data, and inspirations that will shape the final project. 
-												The site is still under <strong>construction</strong>!!!</p>
-											
-											</h1>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		 </header>
-		</div>
-	</div>
-	
-<br></br><br></br><br></br>
-	<div class="container">
-		<div id="posts">
-			<div class="row">
-				<div class="col-xs-12 col-md-12">
-					<img src="images/circledc.gif" 
-					class="img-responsive" class="image-rounded" alt="Responsive image" />			 
-				 </div>
-			</div>
-			<div class="row">
-				 <div class="col-xs-6 col-sm-4">
-								 
-				 </div>
-				 <div class="col-xs-6 col-sm-4">
-									 
-				 </div>
-				 <div class="col-xs-6 col-sm-4">
-								 
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<br></br><br></br>
-	<nav class="navbar navbar-default" role="navigation">
-	  <div class="container">
-	  <div class="row">
-			<div class="col-xs-6 col-sm-4">
-				<div class="bio">
-				<p> about// </p>	
-				</div>
-			</div>
-			<div class="col-xs-6 col-sm-4">
-				<div class="footerbt">
-					<button type="button" class="btn btn-default btn-lg">
-						<a href="http://localhost/BookExs/D3Template.html" style="color: #2ec089"> 
-						<span class="glyphicon glyphicon-tasks"></span> 
-						</a> <span style="color:#2ec089">  analysis </span>
-					</button>
-					<br></br>
-					<div class="tabs">
-						<p> Walk-through each step of the research process by using resources such as <a href="http://shop.oreilly.com/product/0636920026938.do" style="color: #2ec089"><em>Interactive Data 
-						Visualization for the Web</em></a> and/or others. </p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-sm-4">
-				<div class="footerbt">
-					<button type="button" class="btn btn-default btn-lg
-						<a href="https://plus.google.com/u/0/116865405037969161840/posts" style="color: #2ec089">
-						<span class="glyphicon glyphicon-heart-empty"></span> 
-						</a> inspirations 
-					</button>
-					<br></br>
-					<div class="tabs">
-						<p>Access existing visualizations that influenced the final project.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-2 col-sm-4 col-sm-offset-4">
-				<div class="footerbt">
-					<button type="button" class="btn btn-default btn-lg">
-						<a href="https://plus.google.com/u/0/116865405037969161840/posts"style="color: #2ec089">
-						<span class="glyphicon glyphicon-comment"></span>  
-						</a> <span style="color:#2ec089"> feedback </span>
-					</button>
-					<br></br>
-					<div class="tabs">
-						<p> Provide comments and feedback about project posts.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-2 col-sm-2 col-sm-offset-1">
-				<div class="footerbt">
-					<button type="button" class="btn btn-default btn-lg"style="color: #2ec089">
-						<span class="glyphicon glyphicon-stats"></span> 
-						</a>  visualization 
-					</button>
-					<br></br>
-					<div class="tabs">
-						<p></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-	</nav>
-	<div class="row">
-	  <div class="col-xs-6 col-md-3">
-		<a href="#" class="thumbnail">
-		  <img data-src="holder.js/100%x180" alt="...">
-		</a>
-	  </div>
-	</div>
-		-->
+	<!-- Top header-->
+	 <div id="wordtree_double" style="width: 900px; height: 500px;"></div>
 	<!-- javascript -->
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="js/boostrap.min.js"></script>
