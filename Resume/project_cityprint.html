@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brittney Younger</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!--Javascript for font-->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		
+			<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<!--JqUERY-->
+		<script type="text/javascript">
+			$('body').scrollspy({ target: '.navbar navbar-fixed-top' })
+		</script>
+		 <script type="text/javascript">
+			  WebFontConfig = {
+				google: { families: [ 'Raleway::latin' ] }
+			  };
+			  (function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			  })(); 
+		</script>
+		<script type="text/javascript">
+ 		   
+              $(document).ready(function()
+              {
+                  $('.header2').click(function ()
+                  {
+                      $(this).nextAll('tr').each( function()
+                      {
+                          if ($(this).is('.header2'))
+                         {
+                            return false;
+                         }
+	                      $(this).toggle(450);
+                      });
+                  });
+             });
+		</script>
+		<style type="text/css">
+		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
+		::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+		</style>
+		
+		<style>
+				
+		#n3c {
+		font-family: "Raleway", sans-serif;
+		font-size: 18px;
+		}
+		
+		#n1c {
+		font-family: "Raleway", sans-serif;
+		font-size: 18px;
+		}
+		
+		.ctable {
+		font-family: "Raleway", sans-serif;
+		font-size: 18px;
+		text-align: center;
+		margin: auto;
+		position: absolute;
+		width: 330px;
+		height: 400px;
+		color: #808080;
+		}
+
+		tr.header2{
+		cursor:pointer;
+		}
+
+	</style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar navbar-fixed-top">
+	<div role="tabpanel">
+	<div class="container">
+		<nav class="navbar navbar-fixed-top" id="toph">
+			 <p><a class="navbar-text" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span>by</a></p>
+			 <!--ul class="nav nav-tabs pull-right" role="tablist">
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROFILE</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >SKILLS</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROJECTS</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >CONTACT</a></li>
+			 </ul-->
+		</nav>
+	</div>
+	<br/><br/><br/>
+	<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1 class="text-center" id="name">Visualization Story: Back-to-Back Comparison</h1>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<table class="table table-hover">
+					 <tr>
+						<td class="text-center" style="font: 10px Open Sans; font-size: 18px; color: #33baaf"><strong>INTERACTION</strong></td>
+					 </tr>
+					 <tr>	
+						<td class="text-center" id="datat"></td>						
+					 </tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3" >
+				<p class="text-center" id="purpose"><strong>by Brittney Younger</strong></p>
+				<p class="text-left" id="purpose">Similar to the <a href="project_treemap.html">Treemap Visualization</a> the following comparison table was developed for a mobile application. I wanted to create an user focused visualization
+				that allows users to compare Washington D.C.'s neighborhoods against each other. I wanted the user experience to be somewhat like using a mobile sport application. Where a 
+				neighborhood statistics faced off against each other. Each indicator group are color coded and the years designated by the color opacity.</p>
+				<br/>
+				<p class="text-left" id="purpose"> Users can select both drop-downs to compare up to 39 cluster groups that represent D.C. neighborhoods. </p>
+			</div>
+		</div>
+	</div>
+	</div>
+	<br/><br/>
+	<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3" >
+			<!-- 16:9 aspect ratio -->
+				<div class="embed-responsive embed-responsive-16by9" style="height: 980px">
+				 		<table class="ctable">
+							<tr style="width: 42px; height: 20px; font-weight: lighter;">
+								<th id="n1c"></th>
+								<th id="n2c"></th>
+								<th id="n3c"></th>
+							</tr>
+							<tr style="width: 40px; height: 5px; margin-top: -5px; margin-bottom: -5px; font-weight: bold; font-size: 9px;">
+								<td></td>
+								<td><p style="font-size: 9.5px; color: #676767"><span style="opacity: 0.5">2000 </span>  2010</p> </td>
+								<td></td>
+							</tr>
+							<tr style="width: 42px; height: 10px; color: #b9b9b9;">
+								<td id="tpa2000" class="tpa2010" style="position: static"></td>
+								<td>population</td>
+								<td id="tpb2000" class="tpb2010" style="position: static"></td>
+							</tr>
+						<tr style="width: 40px; height: 5px; color: #cecece">
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">47,500</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">0</p>
+								</td>
+								<td style="font-size: 6px;">total</td>
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">0</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">47,500</p>
+								</td>
+							</tr>
+							<tr class="header2" style="width: 40px; height: 10px; font-weight: bold; font-size: 18px">
+								<td></td>
+								<td>DEMOGRAPHIC</td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; margin-top: -5px; margin-bottom: -5px; font-weight: bold; font-size: 10px;">
+								<td></td>
+								<td><p style="font-size: 10px; color: #ffc425"><span style="opacity: 0.5">2000 </span>  2010</p> </td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar1a2000" class="bar1a2010" style="position: static"></td>
+								<td>asian</td>
+								<td id="bar1b2000" class="bar1b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar2a2000" class="bar2a2010" style="position: static"></td>
+								<td>black</td>
+								<td id="bar2b2000" class="bar2b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar3a2000" class="bar3a2010" style="position: static"></td>
+								<td>hispanic</td>
+								<td id="bar3b2000" class="bar3b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar4a2000" class="bar4a2010" style="position: static"></td>
+								<td>white</td>
+								<td id="bar4b2000" class="bar4b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; color: #cecece">
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">100%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">0%</p>
+								</td>
+								<td></td>
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">0%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">100%</p>
+								</td>
+							</tr>
+							<tr class="header2" style="width: 40px; height: 10px; font-weight: bold; font-size: 18px">
+								<td></td>
+								<td>WELLBEING</td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; margin-top: -5px; margin-bottom: -5px; font-weight: bold; font-size: 10px;">
+								<td></td>
+								<td><p style="font-size: 10px; color: #d11141"><span style="opacity: 0.4">2000 </span>  2010</p> </td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar5a2000" class="bar5a2010" style="position: static"></td>
+								<td>no high school <br /> education*</td>
+								<td id="bar5b2000" class="bar5b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar6a2000" class="bar6a2010" style="position: static"></td>
+								<td>poverty</td>
+								<td id="bar6b2000" class="bar6b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar7a2000" class="bar7a2010" style="position: static"></td>
+								<td>unemployment</td>
+								<td id="bar7b2000" class="bar7b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; color: #cecece">
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">100%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">0%</p>
+								</td>
+								<td></td>
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">0%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">100%</p>
+								</td>
+							</tr>
+							<tr class="header2"style="width: 40px; height: 10px; font-weight: bold; font-size: 18px">
+								<td></td>
+								<td>CRIME</td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; margin-top: -5px; margin-bottom: -5px; font-weight: bold; font-size: 9px;">
+								<td></td>
+								<td><p style="font-size: 10px; color: #00b159"><span style="opacity: 0.4">2000 </span>  2010</p> </td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar8a2000" class="bar8a2010" style="position: static"></td>
+								<td>property</td>
+								<td id="bar8b2000" class="bar8b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar9a2000" class="bar9a2010" style="position: static"></td>
+								<td>violent</td>
+								<td id="bar9b2000" class="bar9b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; color: #cecece">
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">100%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">0%</p>
+								</td>
+								<td></td>
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">0%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">100%</p>
+								</td>
+							</tr>
+							<tr class="header2" style="width: 40px; height: 10px; font-weight: bold; font-size: 18px">
+								<td></td>
+								<td>HOUSING</td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 5px; margin-top: -5px; margin-bottom: -5px; font-weight: bold; font-size: 10px;">
+								<td></td>
+								<td><p style="font-size: 10px; color: #00aedb"><span style="opacity: 0.4">2000 </span>  2010</p> </td>
+								<td></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar10a2000" class="bar10a2010" style="position: static"></td>
+								<td>home <br /> ownership</td>
+								<td id="bar10b2000" class="bar10b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 40px; height: 30px; color: #b9b9b9">
+								<td id="bar11a2000" class="bar11a2010" style="position: static"></td>
+								<td>houses for <br /> rent*</td>
+								<td id="bar11b2000" class="bar11b2010" style="position: static"></td>
+							</tr>
+							<tr style="width: 42px; height: 5px; color: #cecece">
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">100%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">0%</p>
+								</td>
+								<td></td>
+								<td style="border-top-style: solid; border-top-color: #f2f2f2; top: -10px"><p style="text-align: left; font-size: 10px; position: absolute">0%</p> 
+								<p style="text-align: right; font-size: 10px; position: relative">100%</p>
+								</td>
+							</tr>
+							</table> 
+						<script src="js/comparetable.js"></script>				
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<br/><br/>
+		<div class="row text-center" id="arrowd2">
+			<div class="col-md-6 col-md-offset-3">
+				  <img src="img/arrowb.png">
+			</div>
+		</div>	
+		<div class="row" id="blockcolor3">
+		<div class="container">
+			<br/><br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3" id="contact">
+				<p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<table class="table">
+						 <tr>
+							<td class="text-center" style="font: 10px Raleway; font-size: 16px; color: white"><strong>Brittney Younger</strong>
+							<br/><br/>
+							<img src="img/facev2.png">
+							<br/><br/>
+							<span style="font-size: 12px">Silver Spring, Maryland </span>
+							</td>
+						 </tr>
+					</table>
+				</div>
+				<br/>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+				<button type="button" class="btn minfo">
+				<a href="data/Younger_Brittney_Resume_2015_1.pdf" width="640" height="480">
+				print resume</a></button>
+				
+				<span style=" padding: 30px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
+				<button type="button" class="btn minfo">
+				<a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">
+				find on LinkedIn</a></button>
+				</div>
+			</div>
+			<br/><br/><br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+				<p id="footerinfo">Works © Brittney Younger 2015</p>
+				<p id="footerinfo">Please do not reproduce without the expressed written consent of Brittney Younger.</p>
+				<p id="footerinfo"> "Graduate Cap" created by Marc Haumann from the Noun Project.</p>
+				</div>
+			</div>
+		</div>
+		<br/>
+	  </div>
+	
+	</div>
+	</div>
+<!-- javascript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

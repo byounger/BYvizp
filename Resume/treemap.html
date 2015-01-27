@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Raleway::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  
+<style>
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: auto;
+  position: relative;
+  color: #808080;
+  text-align: center;
+}
+
+form {
+  position: relative;
+  top: -10px;
+  text-align: center;
+}
+
+#treemap {
+  display: block;
+  color: #ffffff;
+  margin-top: 20px;
+  margin: auto;
+  position:relative;
+}
+
+text {
+  font-size: 11px;
+  color: #ffffff;
+  word-wrap: break-word;
+}
+
+rect {
+  fill: none;
+}
+
+
+#legend {
+	font-size: 13.5px;
+	margin-top: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+<h3 style="margin-left= 50px; left: 50px"> Test Neighborhood Indicator Map </h3>
+	<br/> 
+	
+	<form>
+	  <label><input type="radio" name="mode" value="2000" checked> 2000 /</label>
+	  <label><input type="radio" name="mode" value="2010"> 2010</label>
+	</form>
+	<br />
+	<div id="legend"> KEY CATEGORIES </div>
+	<div id="treemap" style="margin-left: 525px"></div>	
+
+		<script>
+		//color palette	
+		var colorbrewer = {Metro: {
+		5: ["#00b159","#d11141","#ffc425","#00aedb","#f37735"],
+		}};
+		//selecting color palette
+		var color = d3.scale.ordinal()
+			.domain(["foo", "bar", "baz"])
+			.range(colorbrewer.Metro[5]);
+
+		</script>
+		<script src="js/treemapsbarsfinal.js"></script>
+	</body>
+</html>

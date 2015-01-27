@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brittney Younger</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!--Javascript for font-->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		
+			<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<!--JqUERY-->
+		<script type="text/javascript">
+			$('body').scrollspy({ target: '.navbar navbar-fixed-top' })
+			
+		</script>
+		
+		<script type="text/javascript">
+			  WebFontConfig = {
+				google: { families: [ 'Raleway::latin' ] }
+			  };
+			  (function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			  })(); 
+		</script>
+			
+			<style type="text/css">
+			::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
+			::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+			</style>
+			  
+			<style>
+
+			body {
+			  font-family: "Raleway", sans-serif;
+			  margin: auto;
+			  position: relative;
+			  color: #808080;
+			  text-align: center;
+			}
+
+			form {
+			  position: relative;
+			  top: -10px;
+			  text-align: center;
+			}
+
+			#treemap {
+			  display: block;
+			  color: #ffffff;
+			  margin-top: 20px;
+			  margin: auto;
+			  position:relative;
+			}
+
+			text {
+			  font-size: 11px;
+			  color: #ffffff;
+			  word-wrap: break-word;
+			}
+
+			rect {
+			  fill: none;
+			}
+
+
+			#legend {
+				font-size: 13.5px;
+				margin-top: 10px;
+				text-align: center;
+				margin-bottom: 10px;
+			}
+
+			</style>
+	</head>
+
+<body data-spy="scroll" data-target=".navbar navbar-fixed-top">
+	<div role="tabpanel">
+	<div class="container">
+		<nav class="navbar navbar-fixed-top" id="toph">
+			 <p><a class="navbar-text" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span>by</a></p>
+			 <!--ul class="nav nav-tabs pull-right" role="tablist">
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROFILE</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >SKILLS</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROJECTS</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >CONTACT</a></li>
+			 </ul-->
+		</nav>
+	</div>
+	<br/><br/><br/>
+	<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1 class="text-center" id="name">Visualization Story: Transitional Treemap</h1>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<table class="table table-hover">
+					 <tr>
+						<td class="text-center" style="font: 10px Open Sans; font-size: 18px; color: #33baaf"><strong>INTERACTIVE</strong></td>
+					 </tr>
+					 <tr>	
+						<td class="text-center" id="datat"></td>						
+					 </tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<p class="text-center" id="purpose"><strong>by Brittney Younger</strong></p>
+				<p class="text-left" id="purpose">This visualization project was developed for a mobile application. The visualization is meant to represent specific
+				indicators of a city. Each indicator is grouped by a specific category, which is represented by the key category legend color code above the treemap. Additionally because 
+				the data is based from two time periods, the buttons above the legend allow users to transition from 2000 data to 2010 data.</p>
+				<br/>
+				<p class="text-left" id="purpose">I selected a treemap to visualize the data because I wanted something that showed the magnitude of change as well as
+				something that users can easily interact and hopefully learn.
+			</div>
+		</div>
+	</div>
+	</div>
+	<br/><br/>
+	<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+			<!-- 16:9 aspect ratio -->
+				<div class="embed-responsive embed-responsive-16by9" style="height: 550px;">
+						<h3 style="margin-left= 50px; left: 50px"> Test Neighborhood Indicator Map </h3>
+							<br/> 
+							
+							<form>
+							  <label><input type="radio" name="mode" value="2000" checked> 2000 /</label>
+							  <label><input type="radio" name="mode" value="2010"> 2010</label>
+							</form>
+							<div id="legend"> KEY CATEGORIES </div>
+							<div id="treemap" style="margin-left: 110px"></div>	
+
+								<script>
+								//color palette	
+								var colorbrewer = {Metro: {
+								5: ["#00b159","#d11141","#ffc425","#00aedb","#f37735"],
+								}};
+								//selecting color palette
+								var color = d3.scale.ordinal()
+									.domain(["foo", "bar", "baz"])
+									.range(colorbrewer.Metro[5]);
+
+								</script>
+								<script src="js/treemapsbarsfinal.js"></script>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<br/><br/>
+	<div class="row">
+		<div class="container">
+			<div class="col-md-6 col-md-offset-3">
+				<p class="text-left" id="purpose"> Some of the key challenges I faced with this project was selecting the appropriate data format and
+					the overall transition function. Although the transitions worked as whole, I found the zoom function of node groups did not provide all of the 
+					statistics within each group due to certain treemap constraints.</p> 
+			</div>
+		</div>
+	</div>
+	<br/><br/>
+		<div class="row text-center" id="arrowd2">
+			<div class="col-md-6 col-md-offset-3">
+				  <img src="img/arrowb.png">
+			</div>
+		</div>	
+		<div class="row" id="blockcolor3">
+		<div class="container">
+			<br/><br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3" id="contact">
+				<p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<table class="table">
+						 <tr>
+							<td class="text-center" style="font: 10px Raleway; font-size: 16px; color: white"><strong>Brittney Younger</strong>
+							<br/><br/>
+							<img src="img/facev2.png">
+							<br/><br/>
+							<span style="font-size: 12px">Silver Spring, Maryland </span>
+							</td>
+						 </tr>
+					</table>
+				</div>
+				<br/>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+				<button type="button" class="btn minfo">
+				<a href="data/Younger_Brittney_Resume_2015_1.pdf" width="640" height="480">
+				print resume</a></button>
+				
+				<span style=" padding: 30px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
+				<button type="button" class="btn minfo">
+				<a href="https://www.linkedin.com/profile/public-profile-settings?trk=prof-edit-edit-public_profile">
+				find on LinkedIn</a></button>
+				</div>
+			</div>
+			<br/><br/><br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+				<p id="footerinfo">Works © Brittney Younger 2015</p>
+				<p id="footerinfo">Please do not reproduce without the expressed written consent of Brittney Younger.</p>
+				<p id="footerinfo"> "Graduate Cap" created by Marc Haumann from the Noun Project.</p>
+				</div>
+			</div>
+		</div>
+		<br/>
+	  </div>
+	
+	</div>
+	</div>
+<!-- javascript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
