@@ -270,11 +270,11 @@
 }
 
 #blockcolor4{
-	margin-top: 100px;
+	margin-top: -1100px;
 	font: 18px Raleway;
 	background-color: rgba(255, 255, 255, 0.55);
 	color: #676767;
-	z-index: 1;
+	z-index: 20;
 	letter-spacing: 1.5px;
 	margin-left: 8px;
 }
