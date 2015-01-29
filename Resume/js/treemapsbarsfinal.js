@@ -71,7 +71,7 @@ var data = {
    };
 
 
-  var w = 340,
+  var w = 550,
 		h = 370,
 		x = d3.scale.linear().range([0, w]),
 		y = d3.scale.linear().range([0, h]),

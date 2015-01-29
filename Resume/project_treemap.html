@@ -51,7 +51,6 @@
 			  margin: auto;
 			  position: relative;
 			  color: #808080;
-			  text-align: center;
 			}
 
 			form {
@@ -129,8 +128,8 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<p class="text-center" id="purpose"><strong>by Brittney Younger</strong></p>
-				<p class="text-left" id="purpose">This visualization project was developed for a mobile application. The visualization is meant to represent specific
-				indicators of a city. Each indicator is grouped by a specific category, which is represented by the key category legend color code above the treemap. Additionally because 
+				<p class="text-left" id="purpose">This visualization project was developed for a mobile application. The treemap was designed to represent specific
+				indicators of a city. Each indicator is grouped by a specific category, which is represented by the color legend above the treemap. Additionally because 
 				the data is based from two time periods, the buttons above the legend allow users to transition from 2000 data to 2010 data.</p>
 				<br/>
 				<p class="text-left" id="purpose">I selected a treemap to visualize the data because I wanted something that showed the magnitude of change as well as
@@ -143,16 +142,20 @@
 	<div class="row">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center" style="height: 550px;">
-						<h3 style="margin-left= 50px; left: 50px"> Test Neighborhood Indicator Map </h3>
-							<br/> 
-							
+			<div class="col-md-6 col-md-offset-3 text-center">
+						<h3> Test Neighborhood Indicator Map </h3>
+			</div>
+			<div class="col-md-6 col-md-offset-3 text-center">
 							<form>
 							  <label><input type="radio" name="mode" value="2000" checked> 2000 /</label>
 							  <label><input type="radio" name="mode" value="2010"> 2010</label>
 							</form>
+			</div>
+			<div class="col-md-6 col-md-offset-3 text-center">
 							<div id="legend"> KEY CATEGORIES </div>
-							<div id="treemap" style="margin-left: 110px"></div>	
+			</div>
+			<div class="col-md-6 col-md-offset-3 text-center" style="height: 100%; width: 100%;">
+							<div id="treemap" ></div>	
 
 								<script>
 								//color palette	
@@ -168,13 +171,14 @@
 								<script src="js/treemapsbarsfinal.js"></script>
 		 	</div>
 			</div>
+			</div>
 		</div>
 	</div>
 	<br/><br/>
 	<div class="row">
 		<div class="container">
 			<div class="col-md-6 col-md-offset-3">
-				<p class="text-left" id="purpose"> Some of the key challenges I faced with this project was selecting the appropriate data format and
+				<p class="text-left" id="purpose"> Some of the key challenges I faced with this project were selecting the appropriate data format and
 					the overall transition function. Although the transitions worked as whole, I found the zoom function of node groups did not provide all of the 
 					statistics within each group due to certain treemap constraints.</p> 
 			</div>
