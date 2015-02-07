@@ -474,6 +474,11 @@
 	color: white;
 }
 
+.btn:inactive a{
+	text-decoration: none;
+	color: white;
+}
+
 .btn:hover  a{
 	text-decoration: none;
 	color: #33baaf;
