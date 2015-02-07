@@ -480,6 +480,12 @@
 	background: white;	
 }
 
+.btn:visited  a{
+	text-decoration: none;
+	color: #33baaf;
+	background: white;	
+}
+
 .btn:active  a{
 	text-decoration: none;
 	color: #33baaf;
