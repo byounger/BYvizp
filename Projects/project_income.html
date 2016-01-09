@@ -1,0 +1,188 @@
+<!doctype html>
+<html><!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/byicon.png">
+	<title>Brittney Younger</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	
+	<!--Javascript for font-->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		
+			<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<!--JqUERY-->
+		<script type="text/javascript">
+			$('body').scrollspy({ target: '.navbar navbar-fixed-top' })
+			
+		</script>
+		<style type="text/css">
+		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
+		::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+		</style>
+		
+</head>
+
+<body data-spy="scroll" data-target=".navbar navbar-fixed-top" class="zoom">
+	<div role="tabpanel">
+	<nav class="navbar-default navbar-fixed-top" role="navigation" id="toph">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span><span>by</span></a>
+			 <!--ul class="nav nav-tabs pull-right" role="tablist">
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROFILE</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >SKILLS</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROJECTS</a></li>
+				<li role="presentation" ><a href="http://localhost/resume/index.html" >CONTACT</a></li>
+			 </ul-->
+			 </div>
+			</div>
+		</nav>
+	</div>
+	<br/><br/><br/>
+	<div class="row">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h1 class="text-center" id="name">Visualization Story: Income Wealth Gap</h1>
+			</div>
+		</div>
+		<br/>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<table class="table table-hover">
+					 <tr>
+						<td class="text-center" style="font: 10px Open Sans; font-size: 18px; color: #33baaf"><strong>STATIC</strong></td>
+					 </tr>
+					 <tr>	
+						<td class="text-center" id="datat"></td>						
+					 </tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<p class="text-center" id="purpose"><strong>by Brittney Younger</strong></p>
+				<p class="text-left" id="purpose"> This visualization was developed as an improvement 
+				for a report. The report originally included two line graphs that depicted the wealth 
+				gap between the top 5%, next 7%, next 40%, and the bottom 50% for US families and the 
+				wealth gap between specific racial demographics. When considering the improvements, my 
+				main goal was to find simplistic ways to capture trends, the major gaps and highlight 
+				differences between each groups without being overpowering. I really wanted to think 
+				outside the box to provide a visual that was exploratory as well as informative.</p>
+			</div>
+		</div>
+	</div>
+	</div>
+	<br/><br/>
+	<div class="row">
+			<p class="text-center" id="purpose"> <strong>BEFORE</strong></p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+			<img src="img/HouseIncome Disparity Original.png" class="img-responsive" alt="Responsive image">
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+			<p class="text-center" id="purpose"> <strong>AFTER</strong></p>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+			<img src="img/HouseIncome Disparity 12-26-2015Preview.png" class="img-responsive" alt="Responsive image">
+			</div>
+		</div>
+	</div>
+	</div>
+	<br/><br/>
+	<div class="row">
+		<div class="container">
+			<div class="col-md-6 col-md-offset-3">
+				<p class="text-left" id="purpose"> <strong>First Line Graph </strong>– I 
+				decided to move a way from a line graph and come up with a new way to 
+				illustrate trends through individual heat maps. Each heat map equals an 
+				income group and each box in the heat map equals a year. The color of the 
+				heat maps is based on the income range.</p>
+				<br/><br/>
+				<p class="text-left" id="purpose"> <strong>Second Line Graph </strong>– Due 
+				to space constraints and amount of variables illustrated, I decided to stick
+				 with the line graph, but split them into two graphs. Both graphs are 
+				 practically identical except for the African American and Latino indicators.
+				  Using Excel, I colored in the gap between the two lines for each graphic 
+				  and calculated the growth/decline difference between the racial groups for
+				   additional annotation.</p>
+			</div>
+		</div>
+	</div>
+	<br/><br/>
+		<div class="row text-center" id="arrowd2">
+			<div class="col-md-6 col-md-offset-3">
+				  <img src="img/arrowb.png">
+			</div>
+		</div>	
+		<div class="row" id="blockcolor3">
+		<div class="container">
+			<br/><br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3" id="contact">
+				<p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<table class="table">
+						 <tr>
+							<td class="text-center" style="font: 10px Raleway; font-size: 16px; color: white"><strong>Brittney Younger</strong>
+							<br/><br/>
+							<img src="img/facesquare.png">
+							<br/><br/>
+							<span style="font-size: 12px">Silver Spring, Maryland </span>
+							</td>
+						 </tr>
+					</table>
+				</div>
+				<br/>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+				<a href="data/Younger_Brittney_Resume_2015_1.pdf" width="640" height="480" style="text-decoration: none; color: white;"><button type="button" class="btn minfo">
+				print resume</button></a>
+				
+				<span style=" padding: 30px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
+				
+				<a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" style="text-decoration: none; color: white;"><button type="button" class="btn minfo">
+				find on LinkedIn</button></a>
+				</div>
+			</div>
+			<br/><br/><br/>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center">
+				<p id="footerinfo">Works © Brittney Younger 2015</p>
+				<p id="footerinfo">Please do not reproduce without the expressed written consent of Brittney Younger.</p>
+				<p id="footerinfo"> "Graduate Cap" created by Marc Haumann from the Noun Project.</p>
+				<p id="footerinfo"> Word cloud background was created by WordItOut.com.</p>
+				</div>
+			</div>
+		</div>
+		<br/>
+	  </div>
+	
+	</div>
+<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
