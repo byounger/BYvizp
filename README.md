@@ -3,5 +3,5 @@ BYProduction_Thesis
 
 Resume site
 
-Link to draft site:
-http://byounger.github.io/BYvizp/
+Link to website:
+http://byounger.github.io/BYvizp/Projects
