@@ -10,7 +10,17 @@
 	
 	
 	<!--Javascript for font-->
-		<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+		<script type="module">
+
+			import {forceSimulation, forceCollide, forceX} from "https://cdn.jsdelivr.net/npm/d3-force@3/+esm";
+			
+			const nodes = [{}, {}];
+			const simulation = forceSimulation(nodes)
+			    .force("x", forceX())
+			    .force("collide", forceCollide(5))
+			    .on("tick", () => console.log(nodes[0].x));
+			
+			</script>
 		<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
