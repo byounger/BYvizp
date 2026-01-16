@@ -4,4 +4,4 @@ BYProduction_Thesis
 Resume site
 
 Link to website:
-http://byounger.github.io/BYvizp/Projects
+https://byounger.github.io/BYvizp/Projects
