@@ -22,18 +22,21 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 			
 	<!--JqUERY-->
-		<script type="text/javascript">
+	
+		<script>
 			$(document).ready(function() {
-			    // Standard Bootstrap tab initialization
-			    $('.nav-tabs a').click(function (e) {
-			        e.preventDefault();
-			        $(this).tab('show');
-			    });
-			
-			    // Initialize scrollspy
-			    $('body').scrollspy({ target: '.navbar' });
-			});
-			</script>
+	    // This allows clicking the links to switch the actual "active" tab
+	    $('.nav-tabs a').click(function (e) {
+	        e.preventDefault();
+	        $(this).tab('show');
+	    });
+	
+	    // Optional: Auto-scroll to top when a tab is clicked
+	    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+	        window.scrollTo(0, 0);
+	    });
+		});
+		</script>
 		
 		<style type="text/css">
 		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
@@ -83,11 +86,12 @@
 					<a class="navbar-brand" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"><span>by</span></span></a>
 				</div>
 				<div id="navbarCollapse" class="navbar-collapse collapse">
-					<ul class="nav navbar-default nav-tabs pull-right">
-					    <li><a href="index.html#profile">PROFILE</a></li>
-					    <li><a href="index.html#projects">PROJECTS</a></li>
-					    <li><a href="#contact">CONTACT</a></li> </ul>
-										
+					<ul class="nav navbar-default nav-tabs pull-right" role="tablist">
+					    <li class="active"><a href="#profile" role="tab" data-toggle="tab">PROFILE</a></li>
+					    <li><a href="#projects" role="tab" data-toggle="tab">PROJECTS</a></li>
+					    <li><a href="#contact" role="tab" data-toggle="tab">CONTACT</a></li>
+					</ul>
+								
 				</div>
 			</div>
 		</nav>
