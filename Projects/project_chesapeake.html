@@ -25,17 +25,15 @@
 	
 		<script type="text/javascript">
 			$(document).ready(function() {
-	    // This allows clicking the links to switch the actual "active" tab
-	    $('.nav-tabs a').click(function (e) {
-	        e.preventDefault();
-	        $(this).tab('show');
-	    });
-	
-	    // Optional: Auto-scroll to top when a tab is clicked
-	    $('.nav-tabs a').on('shown.bs.tab', function (e) {
-	        window.scrollTo(0, 0);
-	    });
-		});
+			    // Standard Bootstrap tab initialization
+			    $('.nav-tabs a').click(function (e) {
+			        e.preventDefault();
+			        $(this).tab('show');
+			    });
+			
+			    // Initialize scrollspy
+			    $('body').scrollspy({ target: '.navbar' });
+			});
 		</script>
 		
 		<style type="text/css">
