@@ -1,207 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	 <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/byicon.png">
-	<title>Brittney Younger</title>
+    <title>Brittney Younger - Maryland Crab Population</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-	
-	
-	<!--Javascript for font-->
-		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<link href='https://fonts.googleapis.com/css2?family=Marvel' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css2?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css2?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css2?family=Pacifico' rel='stylesheet' type='text/css'>
-		
-	<!-- javascript -->
-		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-			
-	<!--JqUERY-->
-	
-		<script type="text/javascript">
-			$(document).ready(function() {
-			    // Standard Bootstrap tab initialization
-			    $('.nav-tabs a').click(function (e) {
-			        e.preventDefault();
-			        $(this).tab('show');
-			    });
-			
-			    // Initialize scrollspy
-			    $('body').scrollspy({ target: '.navbar' });
-			});
-		</script>
-		
-		<style type="text/css">
-		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
-		::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+    
+    <link href='https://fonts.googleapis.com/css2?family=Marvel' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css2?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css2?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css2?family=Pacifico' rel='stylesheet' type='text/css'>
+    
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-					/* Ensure the tab content takes up the full screen */
-		.tab-pane {
-			min-height: 100vh;
-		}
-		
-		/* Background for the contact section */
-		#blockcolor3 {
-			background-color: #33baaf; /* You can adjust this hex code to your preferred color */
-			min-height: 100vh;
-			color: white;
-			padding-top: 50px;
-		}
-		
-		/* Style for the 'print resume' buttons to make them pop */
-		.btn.minfo {
-			background-color: transparent;
-			border: 2px solid white;
-			color: white;
-			font-family: 'Raleway', sans-serif;
-			transition: all 0.3s ease;
-		}
-		
-		.btn.minfo:hover {
-			background-color: white;
-			color: #33baaf;
-		}
-		</style>
-		
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // ONLY stop the link behavior for #contact. 
+            // This allows PROFILE and PROJECTS to work as normal links.
+            $('.nav-tabs a[href="#contact"]').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+                // Scroll to the contact section smoothly
+                $('html, body').animate({
+                    scrollTop: $("#contact").offset().top
+                }, 800);
+            });
+        });
+    </script>
+    
+    <style type="text/css">
+        body { padding-top: 70px; } /* Prevents navbar from covering title */
+        ::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
+        ::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+
+        .tab-pane { min-height: 100vh; }
+        #blockcolor3 {
+            background-color: #33baaf;
+            min-height: 100vh;
+            color: white;
+            padding-top: 50px;
+        }
+        
+        .btn.minfo {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        
+        .btn.minfo:hover {
+            background-color: white;
+            color: #33baaf;
+        }
+        
+        #purpose { line-height: 1.6; font-size: 16px; }
+    </style>
 </head>
-  
-<body data-spy="scroll" data-target=".navbar-default navbar-fixed-top" class="zoom">
-	<div role="tabpanel">
-		<nav class="navbar-default navbar-fixed-top" role="navigation" id="toph">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					 <button type="button" class="btn navbar-toggle" data-toggle="collapse" aria-expanded="false" data-target="#navbarCollapse">
-						 <span class="sr-only"> Toggle navigation</span>
-						 <span class="icon-bar"></span>
-						 <span class="icon-bar"></span>
-						 <span class="icon-bar"></span>
-					 </button>
-					<a class="navbar-brand" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"><span>by</span></span></a>
-				</div>
-				<div id="navbarCollapse" class="navbar-collapse collapse">
-					<ul class="nav navbar-default nav-tabs pull-right">
-					    <li><a href="index.html">PROFILE</a></li>
-					    <li><a href="index.html#projects">PROJECTS</a></li>
-					    
-					    <li><a href="#contact" data-toggle="tab">CONTACT</a></li>
-					</ul>
-								
-				</div>
-			</div>
-		</nav>
-	</div>
-	<br/><br/><br/>
-	<div class="row">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<h1 class="text-center" id="name">Maryland Crab Population</h1>
-			</div>
-		</div>
-		<br/>
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<table class="table table-hover">
-					 <tr>
-						<td class="text-center" style="font: 10px Open Sans; font-size: 18px; color: #33baaf"><strong>STATIC</strong></td>
-					 </tr>
-					 <tr>	
-						<td class="text-center" id="datat"></td>						
-					 </tr>
-				</table>
-			</div>
-		</div>
-		<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<p class="text-center" id="purpose"><strong>by Brittney Younger</strong></p>
-				<p class="text-left" id="purpose"> I developed this visualization for a course during my graduate
-				studies. The assignment was to pick or create a dataset, analyze possible correlations, and
-				depict overall results with a static or dynamic visualization.</p>
-			</div>
-		</div>
-		</div>
-	<br/><br/>
-	<div class="row">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-			<img src="img/chesapeake.png" class="img-responsive" alt="Responsive image">
-			</div>
-		</div>
-	</div>
-	</div>
-	<br/><br/>
-	<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<p class="text-left" id="purpose"> The major challenges of this project were justifying a weak correlation and depicting the results. Although I think
-				I could've worked on the water statistics a little more; it's an interesting way to review Maryland crabs. Also, I primarily used Excel to create
-				the main visualization.</p>
-			</div>
-	</div>
-	</div>
-	</div>
-		<br/><br/>
-	<div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="contact">
-        <div class="row text-center" id="arrowd2">
-            <div class="col-md-6 col-md-offset-3">
-                <img src="img/arrowb.png" alt="arrow">
+
+<body>
+    <nav class="navbar-default navbar-fixed-top" role="navigation" id="toph">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+                     <span class="sr-only">Toggle navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span> by</a>
             </div>
-        </div>	
-        <div class="row" id="blockcolor3">
-            <div class="container">
-                <br/><br/>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
-                    </div>
-                </div>
-                <br/>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <table class="table" style="border: none;">
-                             <tr>
-                                <td class="text-center" style="font-family: 'Raleway', sans-serif; font-size: 16px; color: white; border: none;">
-                                    <strong>Brittney Younger</strong>
-                                    <br/><br/>
-                                    <img src="img/facesquare.png" class="img-circle" style="width: 120px;">
-                                    <br/><br/>
-                                    <span style="font-size: 12px">Fairfax, Virginia</span>
-                                </td>
-                             </tr>
-                        </table>
-                    </div>
-                </div>
-                <br/>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center">
-                        <a href="data/Younger_Brittney_Resume.pdf" class="btn minfo">print resume</a>
-                        <span style="padding: 30px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
-                        <a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" class="btn minfo">find on LinkedIn</a>
-                    </div>
-                </div>
-                <br/><br/><br/>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center" style="font-size: 11px; opacity: 0.8;">
-                        <p>Works © Brittney Younger 2026</p>
-                        <p>Please do not reproduce without written consent.</p>
-                    </div>
-                </div>
+            <div id="navbarCollapse" class="navbar-collapse collapse">
+                <ul class="nav navbar-default nav-tabs pull-right">
+                    <li><a href="index.html">PROFILE</a></li>
+                    <li><a href="index.html#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
             </div>
-            <br/>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h1 class="text-center" id="name" style="margin-bottom: 30px;">Maryland Crab Population</h1>
+                
+                <table class="table table-hover">
+                     <tr>
+                        <td class="text-center" style="font-family: 'Open Sans'; font-size: 18px; color: #33baaf; border-top: none;"><strong>STATIC VISUALIZATION</strong></td>
+                     </tr>
+                </table>
+
+                <p class="text-center"><strong>by Brittney Younger</strong></p>
+                <p id="purpose">I developed this visualization for a course during my graduate studies. The assignment was to pick or create a dataset, analyze possible correlations, and depict overall results with a static or dynamic visualization.</p>
+                
+                <div style="margin: 40px 0;">
+                    <img src="img/chesapeake.png" class="img-responsive center-block" alt="Chesapeake Crab Visualization">
+                </div>
+
+                <p id="purpose">The major challenges of this project were justifying a weak correlation and depicting the results. Although I think I could've worked on the water statistics a little more, it's an interesting way to review Maryland crabs. I primarily used Excel to create the main visualization.</p>
+            </div>
         </div>
     </div>
-</div>
-	
-	</div>
-	</div>
-<!-- javascript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="contact">
+            <div class="row text-center" id="arrowd2" style="margin-top: 50px;">
+                <div class="col-md-6 col-md-offset-3">
+                    <img src="img/arrowb.png" alt="arrow">
+                </div>
+            </div>	
+            
+            <div id="blockcolor3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <br/>
+                            <p style="font-family: 'Raleway'; font-size: 20px;"><strong>Brittney Younger</strong></p>
+                            <img src="img/facesquare.png" class="img-circle" style="width: 150px; border: 3px solid white; margin: 20px 0;">
+                            <p>Fairfax, Virginia</p>
+                            <br/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <a href="data/Younger_Brittney_Resume.pdf" class="btn minfo">print resume</a>
+                            <span style="padding: 0 15px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
+                            <a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" class="btn minfo">find on LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 80px; font-size: 12px; opacity: 0.9;">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <p>Works © Brittney Younger 2026</p>
+                            <p>Please do not reproduce without written consent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
