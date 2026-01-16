@@ -1,4 +1,8 @@
-
+/* Ensure the tab content takes up the full screen */
+.tab-pane {
+	min-height: 100vh;
+}
+	
 ::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
 ::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
 /* Match the look of your tabs using pills so they don't break links */
