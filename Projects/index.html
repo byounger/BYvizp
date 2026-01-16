@@ -23,16 +23,48 @@
 			
 	<!--JqUERY-->
 		<script type="text/javascript">
-		$('body').scrollspy({ target: '.navbar' })
-		$('#myTab a[href="#profile"]').tab('show') // Select tab by name
-		$('#myTab a[href="#skills"]').tab('show') // Select tab by name
-		$('#myTab a[href="#projects"]').tab('show') // Select tab by name
-		$('#myTab a[href="#contact"]').tab('show') // Select tab by name
-		</script>
+			$(document).ready(function() {
+			    // Standard Bootstrap tab initialization
+			    $('.nav-tabs a').click(function (e) {
+			        e.preventDefault();
+			        $(this).tab('show');
+			    });
+			
+			    // Initialize scrollspy
+			    $('body').scrollspy({ target: '.navbar' });
+			});
+			</script>
 		
 		<style type="text/css">
 		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
 		::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+
+					/* Ensure the tab content takes up the full screen */
+		.tab-pane {
+			min-height: 100vh;
+		}
+		
+		/* Background for the contact section */
+		#blockcolor3 {
+			background-color: #33baaf; /* You can adjust this hex code to your preferred color */
+			min-height: 100vh;
+			color: white;
+			padding-top: 50px;
+		}
+		
+		/* Style for the 'print resume' buttons to make them pop */
+		.btn.minfo {
+			background-color: transparent;
+			border: 2px solid white;
+			color: white;
+			font-family: 'Raleway', sans-serif;
+			transition: all 0.3s ease;
+		}
+		
+		.btn.minfo:hover {
+			background-color: white;
+			color: #33baaf;
+		}
 		</style>
 		
 </head>
@@ -68,7 +100,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-			<div class="col-md-6 col-md-offset-3" id="profile">
+			<div class="col-md-6 col-md-offset-3">
 				<p class="text-center" id="name">Brittney Younger</p>
 			</div>
 		</div>
@@ -140,7 +172,7 @@
 		</div>
 	</div>
 	</div>
-	<div role="tabpanel" class="tab-pane active" id="skills">
+	<div role="tabpanel" class="tab-pane" id="skills">
 		
 			
 		<!--div class="row" style="background-image:url(img/WordIt.png); height: 100%;">
@@ -371,12 +403,12 @@
 		</div>
 		</div-->
 			
-	<div role="tabpanel" class="tab-pane active" id="projects">	
+	<div role="tabpanel" class="tab-pane" id="projects">	
 	<div class="row">
 		<div class="container">
 			<div class="row" id="objective3">
 				<div class="col-md-6 col-md-offset-3" >
-					<p style="text-align: center; margin-top: 50px; font-style: italic" id="projects">Create - Shape - Build</p>
+					<p style="text-align: center; margin-top: 50px; font-style: italic">Create - Shape - Build</p>
 				</div>
 			</div>
 			<br/><br/>
@@ -530,7 +562,7 @@
 			</div>
 		
 		
-		<div role="tabpanel" class="tab-pane active" id="contact">
+		<div role="tabpanel" class="tab-pane" id="contact">
 		<div class="row text-center" id="arrowd2">
 			<div class="col-md-6 col-md-offset-3">
 				  <img src="img/arrowb.png">
@@ -540,7 +572,7 @@
 		<div class="container">
 			<br/><br/>
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3" id="contact">
+				<div class="col-md-6 col-md-offset-3">
 				<p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">Contact Info...</p>
 				</div>
 			</div>
@@ -564,7 +596,7 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center">
 				
-				<a href="data/Younger_Brittney_Resume" width="640" height="480" style="text-decoration: none; color: white;"><button type="button" class="btn minfo">
+				<a href="data/Younger_Brittney_Resume.pdf" width="640" height="480" style="text-decoration: none; color: white;"><button type="button" class="btn minfo">
 				print resume</button></a>
 				
 				<span style=" padding: 30px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
