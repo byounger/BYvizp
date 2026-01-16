@@ -38,28 +38,52 @@
 			  })(); 
 		</script>
 		<script type="text/javascript">
- 		   
-              $(document).ready(function()
-              {
-                  $('.header2').click(function ()
-                  {
-                      $(this).nextAll('tr').each( function()
-                      {
-                          if ($(this).is('.header2'))
-                         {
-                            return false;
-                         }
-	                      $(this).toggle(450);
-                      });
-                  });
-             });
-		</script>
-		<style type="text/css">
+        $(document).ready(function() {
+            // This handles the smooth scroll for the Contact link on this page
+            $('a[href="#contact"]').click(function (e) {
+                e.preventDefault();
+                // Ensure the tab pane is visible
+                $('#contact').addClass('active');
+                // Scroll to the contact section smoothly
+                $('html, body').animate({
+                    scrollTop: $("#contact").offset().top
+                }, 800);
+            });
+        });
+    </script>
+    
+    <style type="text/css">
+        body { padding-top: 80px; } 
+        /* Match the look of your tabs using pills so they don't break links */
+        .nav-pills > li > a { 
+            color: #404040; 
+            font-family: 'Raleway', sans-serif; 
+            font-weight: bold;
+            border-radius: 0;
+        }
+        .nav-pills > li > a:hover { background-color: #f5f5f5; }
+
+        #blockcolor3 {
+            background-color: #33baaf;
+            min-height: 100vh;
+            color: white;
+            padding-top: 50px;
+        }
+        
+        .btn.minfo {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        
+        .btn.minfo:hover { background-color: white; color: #33baaf; }
+        #purpose { line-height: 1.6; font-size: 16px; }
+ 
 		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
 		::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
-		</style>
-		
-		<style>
 				
 		#n3c {
 		font-family: "Raleway", sans-serif;
@@ -92,21 +116,26 @@
 <body data-spy="scroll" data-target=".navbar navbar-fixed-top" class="zoom">
 	<div role="tabpanel">
 	<nav class="navbar-default navbar-fixed-top" role="navigation" id="toph">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span><span>by</span></a>
-			 <!--ul class="nav nav-tabs pull-right" role="tablist">
-				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROFILE</a></li>
-				<li role="presentation" ><a href="http://localhost/resume/index.html" >SKILLS</a></li>
-				<li role="presentation" ><a href="http://localhost/resume/index.html" >PROJECTS</a></li>
-				<li role="presentation" ><a href="http://localhost/resume/index.html" >CONTACT</a></li>
-			 </ul-->
-			 </div>
-			</div>
-		</nav>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home"></span> by</a>
+            </div>
+            <div id="navbarCollapse" class="navbar-collapse collapse">
+                <ul class="nav navbar-default nav-pills pull-right">
+                    <li><a href="index.html">PROFILE</a></li>
+                    <li><a href="index.html#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 	</div>
 	<br/><br/><br/>
-	<div class="row">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
@@ -304,59 +333,38 @@
 		</div>
 	</div>
 	</div>
-		<div class="row text-center" id="arrowd2">
-			<div class="col-md-6 col-md-offset-3">
-				  <img src="img/arrowb.png">
-			</div>
-		</div>	
-		<div class="row" id="blockcolor3">
-		<div class="container">
-			<br/><br/>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3" id="contact">
-				<p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
-				</div>
-			</div>
-			<br/>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<table class="table">
-						 <tr>
-							<td class="text-center" style="font: 10px Raleway; font-size: 16px; color: white"><strong>Brittney Younger</strong>
-							<br/><br/>
-							<img src="img/facesquare.png">
-							<br/><br/>
-							<span style="font-size: 12px">Fairfax, Virginia</span>
-							</td>
-						 </tr>
-					</table>
-				</div>
-				<br/>
-			</div>
-			<br/>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center">
-				<a href="data/Younger_Brittney_Resume.pdf" width="640" height="480" style="text-decoration: none; color: white;"><button type="button" class="btn minfo">
-				print resume</button></a>
-				
-				<span style=" padding: 30px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
-				
-				<a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" style="text-decoration: none; color: white;"><button type="button" class="btn minfo">
-				find on LinkedIn</button></a>
-				</div>
-			</div>
-			<br/><br/><br/>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center">
-				<p id="footerinfo">Works © Brittney Younger 2026</p>
-				<p id="footerinfo">Please do not reproduce without the expressed written consent of Brittney Younger.</p>
-				<p id="footerinfo"> "Graduate Cap" created by Marc Haumann from the Noun Project.</p>
-				<p id="footerinfo"> Word cloud background was created by WordItOut.com.</p>
-				</div>
-			</div>
-		</div>
-		<br/>
-	  </div>
+		<div id="contact" style="margin-top: 100px;">
+        <div class="row text-center" id="arrowd2">
+            <div class="col-md-6 col-md-offset-3">
+                <img src="img/arrowb.png" alt="arrow">
+            </div>
+        </div>	
+        
+        <div id="blockcolor3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p style="font-family: 'Pacifico', cursive; font-size: 25px;">contact info...</p>
+                        <br/>
+                        <p style="font-family: 'Raleway'; font-size: 20px;"><strong>Brittney Younger</strong></p>
+                        <img src="img/facesquare.png" class="img-circle" style="width: 150px; border: 3px solid white; margin: 20px 0;">
+                        <p>Fairfax, Virginia</p>
+                        <br/>
+                        <a href="data/Younger_Brittney_Resume.pdf" class="btn minfo">print resume</a>
+                        <span style="padding: 0 15px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
+                        <a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" class="btn minfo">find on LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 80px; font-size: 12px; opacity: 0.9;">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p>Works © Brittney Younger 2026</p>
+                        <p>Please do not reproduce without written consent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	
 	</div>
 	</div>
