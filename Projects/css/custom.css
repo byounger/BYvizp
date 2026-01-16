@@ -1,10 +1,29 @@
+::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
+::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+
 /* Ensure the tab content takes up the full screen */
 .tab-pane {
 	min-height: 100vh;
 }
-	
-::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
-::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+
+/* Background for the contact section */
+#blockcolor3 {
+	background-color: #33baaf; /* You can adjust this hex code to your preferred color */
+	min-height: 100vh;
+	color: white;
+	padding-top: 50px;
+}
+
+/* Style for the 'print resume' buttons to make them pop */
+.btn.minfo {
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	transition: all 0.3s ease;
+	margin: 5px;
+}
+
 /* Match the look of your tabs using pills so they don't break links */
 .nav-pills > li > a { 
 	color: #404040; 
