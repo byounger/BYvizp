@@ -11,7 +11,7 @@
 	background-color: #33baaf; /* You can adjust this hex code to your preferred color */
 	min-height: 100vh;
 	color: white;
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 /* Style for the 'print resume' buttons to make them pop */
@@ -36,21 +36,6 @@
 	color: #33baaf;
 }
 
-#blockcolor3 {
-	background-color: #33baaf;
-	min-height: 100vh;
-	color: white;
-	padding-top: 50px;
-}
-
-.btn.minfo {
-	background-color: transparent;
-	border: 2px solid white;
-	color: white;
-	font-family: 'Raleway', sans-serif;
-	transition: all 0.3s ease;
-	margin: 5px;
-}
 
 .btn.minfo:hover { background-color: white; color: #33baaf; }
 #purpose { line-height: 1.6; font-size: 16px; 
