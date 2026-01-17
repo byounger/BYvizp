@@ -1,587 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-	 <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/byicon.png">
-	<title>Brittney Younger</title>
+    <title>Brittney Younger | Portfolio</title>
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-	
-	
-	<!--Javascript for font-->
-		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<link href='https://fonts.googleapis.com/css2?family=Marvel' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css2?family=Raleway' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css2?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css2?family=Pacifico' rel='stylesheet' type='text/css'>
-		
-	<!-- javascript -->
-		<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-			
-	<!--JqUERY-->
-		<script type="text/javascript">
-			$(document).ready(function() {
-			    // Standard Bootstrap tab initialization
-			    $('.nav-tabs a').click(function (e) {
-			        e.preventDefault();
-			        $(this).tab('show');
-			    });
-			
-			    // Initialize scrollspy
-			    $('body').scrollspy({ target: '.navbar' });
-			});
-		</script>
-		<style type="text/css">
-		::-webkit-scrollbar {width: 9px; height: 2px; background: #ffffff; }
-		::-webkit-scrollbar-thumb {background-color: #33baaf; -webkit-border-radius: 7ex; }
+    
+    <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Open+Sans&family=Pacifico&family=Marvel' rel='stylesheet' type='text/css'>
+    
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-					/* Ensure the tab content takes up the full screen */
-		.tab-pane {
-			min-height: 100vh;
-		}
-		
-		/* Background for the contact section */
-		#blockcolor3 {
-			background-color: #33baaf; /* You can adjust this hex code to your preferred color */
-			min-height: 100vh;
-			color: white;
-			padding-top: 50px;
-		}
-		
-		/* Style for the 'print resume' buttons to make them pop */
-		.btn.minfo {
-			background-color: transparent;
-			border: 2px solid white;
-			color: white;
-			font-family: 'Raleway', sans-serif;
-			transition: all 0.3s ease;
-			margin: 5px;
-		}
-		.btn.minfo:hover {
-			background-color: white;
-			color: #33baaf;
-		}
-		</style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Standard Bootstrap tab switching logic
+            $('.nav-tabs a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
 
+            // If a URL has #projects or #skills, switch to that tab automatically
+            var hash = window.location.hash;
+            if (hash) {
+                $('.nav-tabs a[href="' + hash + '"]').tab('show');
+            }
+        });
+    </script>
+    
+    <style type="text/css">
+        body { padding-top: 100px; font-family: 'Open Sans', sans-serif; color: #404040; }
+        
+        /* Global Navigation Tweaks */
+        .navbar-default .navbar-brand { font-family: 'Pacifico'; font-size: 24px; color: #33baaf; }
+        .nav-tabs { border-bottom: none; }
+        .nav-tabs > li > a { font-family: 'Raleway'; font-weight: bold; color: #888; border: none !important; }
+        .nav-tabs > li.active > a { color: #33baaf !important; background: transparent !important; }
+
+        /* Section Layouts */
+        .tab-pane { min-height: 80vh; padding-bottom: 80px; }
+        #blockcolor { background-color: #f9f9f9; padding: 60px 0; border-top: 1px solid #eee; }
+        
+        /* Project Grid Styling */
+        .thumbnail { 
+            transition: all 0.3s ease; 
+            border: 1px solid #eee; 
+            padding: 15px; 
+            background: #fff; 
+            margin-bottom: 30px;
+            text-decoration: none !important;
+        }
+        .thumbnail:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); 
+        }
+        .project-badge {
+            position: absolute; top: 15px; right: 25px; 
+            background: #33baaf; color: white; 
+            font-size: 10px; font-weight: bold; 
+            padding: 3px 8px; border-radius: 3px;
+        }
+
+        /* Skills Styling */
+        #blockcolor4 {
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('img/WordIt.png');
+            background-size: cover;
+            padding: 100px 40px;
+            border-radius: 15px;
+        }
+
+        /* Footer & Buttons */
+        #blockcolor3 { background-color: #33baaf; color: white; padding: 80px 0; }
+        .btn.minfo {
+            background-color: transparent; border: 2px solid white; color: white;
+            font-family: 'Raleway'; transition: all 0.3s ease; margin: 10px; padding: 10px 25px;
+        }
+        .btn.minfo:hover { background-color: white; color: #33baaf; }
+        #footerinfo { font-size: 11px; margin-bottom: 5px; opacity: 0.8; line-height: 1.8; }
+    </style>
 </head>
-  
-<body data-spy="scroll" data-target=".navbar-default navbar-fixed-top" class="zoom">
-	<div role="tabpanel">
-		<nav class="navbar-default navbar-fixed-top" role="navigation" id="toph">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					 <button type="button" class="btn navbar-toggle" data-toggle="collapse" aria-expanded="false" data-target="#navbarCollapse">
-						 <span class="sr-only"> Toggle navigation</span>
-						 <span class="icon-bar"></span>
-						 <span class="icon-bar"></span>
-						 <span class="icon-bar"></span>
-					 </button>
-					<a class="navbar-brand" href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"><span>by</span></span></a>
-				</div>
-				<div id="navbarCollapse" class="navbar-collapse collapse">
-					<ul class="nav navbar-default nav-tabs pull-right" role="tablist">
-						<li><a href="#profile" aria-controls="home" role="tab" data-toggle="tab">PROFILE</a></li>
-						<li><a href="#proj" aria-controls="proj" role="tab" data-toggle="tab">PROJECTS</a></li>
-						<li><a href="#skills" aria-controls="skills" role="tab" data-toggle="tab">SKILLS</a></li-->
-						<li><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">CONTACT</a></li>
-					 </ul>
-					
-				</div>
-			</div>
-		</nav>
 
-	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<div class="tab-content">
-		<div id="profile" role="tabpanel" class="tab-pane active">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
-						<p class="text-center" id="name">Brittney Younger</p>
-						</div>
-					</div>
-					<br/><br/><br/><br/>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-					<p class="text-center" id="objective"> <strong>I'm a PMP and SAFe Scrum Master with 14+ years of experience providing business analysis, analytics, process improvement, customer success, 
-							    										and project management expertise to business stakeholders across various industries.
-																Area of expertise: Customer Success, Project Management, Business Analysis, Sales Support, & Communication.</strong> </p>
-					</div>
-				</div>
-				<br/><br/><br/>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-						<table class="table table-hover">
-					 	<tr>
-						<td class="text-center" style="font-family: 'Raleway', cursive; font-size: 20px; color: #33baaf"><strong>Passion</strong></td>
-					 	</tr>
-					 	<tr>	
-						<td class="text-center" id="datat"> Project Management and Data Storytelling</td>						
-					 	</tr>
-						</table>
-					</div>
-				</div>
-				</div>
-			<br/><br/>
-		<div class="row" id="blockcolor">
-			<div class="container">
-				<div class="row text-center" id="arrowd">
-					<div class="col-md-6 col-md-offset-3">
-				 	<img src="img/arrowg2.png">
-					</div>
-				</div>	
-				<br/><br/>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-					<p class="text-center" style="font: 20px Raleway;">Education</p>
-				</div>
-			</div>
-				<div class="col-md-6 col-md-offset-3">
-					<table class="table text-center">
-						<tr>
-							<td class="pedu" style="width: 200px">
-							<strong>MARYLAND INSTITUTE COLLEGE of ART</strong>
-							<img src="img/noun_1051.svg" style="width: 120px; height: 110px">
-							<p class="pedu">2014</p>
-							<p class="pedu"><strong>MASTER of PROFESSIONAL STUDIES</strong></p>
-							<p class="pedu">Information Visualization</p>
-							</td>
-							<td style="font-family: 'Pacifico', cursive; width: 160px; font-size: 45px"></br> & </td>
-							
-							<td class="pedu" style="width: 200px">
-							<strong>UNIVERSITY of DELAWARE</strong>
-							<img src="img/noun_1051.svg" style="width: 120px; height: 110px">
-							<p class="pedu">2010</p>
-							<p class="pedu"><strong>BACHELOR of SCIENCE</strong></p>
-							<p class="pedu">International Business</p>
-							<p class="pedu"><strong>MINORS</strong></p>
-							<p class="pedu">Chinese & Economics</p>
-							</td>
-						 </tr>
-					</table>
-				</div>
-			</div>
-			</div>
-		</div>
-	<div id="skills" role="tabpanel" class="tab-pane">
-	    <div class="container">
-	        <div class="row" id="blockcolor4" style="background-image:url(img/WordIt.png); background-size: cover; padding: 150px 0;">
-	            
-	            <div class="col-md-6 col-md-offset-1">
-	                <p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 20px; color: #404040">Skills...</p>
-	                <br/>
-	                <p>Deliver a strategic blend of <strong style="color: #33baaf">Project Management</strong> excellence & <strong style="color: #33baaf">Agile leadership</strong> to drive business growth.</p>
-	                <br/>
-	                <p>Leverage <strong style="color: #33baaf">certified PMP & CSM</strong> expertise to streamline workflows and enhance team velocity.</p>
-	                <br/>
-	                <p>Passionate about translating <strong style="color: #33baaf">complex requirements</strong> into actionable roadmaps that deliver measurable stakeholder value.</p>
-	            </div>	
-	
-	            <div class="col-md-4">
-	                <p class="text-center" style="font-family: 'Pacifico', cursive; font-size: 20px; color: #404040">Certs...</p>
-	                <div class="text-center">
-	                    <img src="img/SSM Badge.png" style="width: 120px; margin-bottom: 20px;">
-	                    <br/>
-	                    <img src="img/PMP Badge.png" style="width: 120px;">
-	                </div>
-	            </div>
-	            
-	        </div>
-	    </div>				
-	</div>
-			<!--div class="row text-center" id="arrowd3">
-			<div class="col-md-6 col-md-offset-3">
-				  <img src="img/arrowy.png">
-			</div>
-		</div>	
-		<div class="row" id="blockcolor2">
-		<div class="container">
-			<br/>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<p class="text-center" id="objective2"> drive for exploring <strong style="color: #33baaf">technology & tools</strong>.</p>
-				</div>
-			</div>
-			<br/>
-			<div class="row">
-				 <div class="col-sm-6 col-md-4">
-							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-							<div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingFour">
-							  <h4 class="panel-title">
-								<a data-toggle="collapse" class="collapsed menu-accordion"  data-parent="#accordion1" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-								  Excel
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> excellent:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingFive">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion1" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-								  Sportfire
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> excellent:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingSix">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion1" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-								  Visio
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> pretty good:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  </div>
-						 </div>
-						 <div class="col-sm-6 col-md-4">
-							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-							<div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingTen">
-							  <h4 class="panel-title">
-								<a data-toggle="collapse" class="collapsed menu-accordion"  data-parent="#accordion1" href="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-								  PowerPoint
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseTen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> excellent:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingEleven">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion1" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-								  Word
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseEleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
-							  <div class="panel-body">
-								<span style="margin-top:-50px"> excellent:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok"aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingTwelve">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-								  Illustrator
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseTwelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> pretty good:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  </div>
-						 </div>
-						 <div class="col-sm-6 col-md-4">
-							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingSeven">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-								  HTML
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> good:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok"aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok"aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingEight">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion2" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-								  CSS
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> good:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars1" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok"aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						  <div class="panel panel">
-							<div class="panel-heading" role="tab" id="headingNine">
-							  <h4 class="panel-title">
-								<a class="collapsed menu-accordion" data-toggle="collapse" data-parent="#accordion2" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-								  Javascript
-								</a>
-							  </h4>
-							</div>
-							<div id="collapseNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
-							  <div class="panel-body">
-								<span style="margin-top: -50px"> ok:</span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="stars" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok"aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-								<span id="starswo" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-							  </div>
-							</div>
-						  </div>
-						</div>			
-					</div>
-					</div>
-				</div>
-				<br/><br/><br/>
-		</div>
-		</div-->
-			
-	<div id="proj" role="tabpanel" class="tab-pane">	
-	<div class="row">
-		<div class="container">
-			<div class="row" id="objective3">
-				<div class="col-md-6 col-md-offset-3" >
-					<p style="text-align: center; margin-top: 50px; font-style: italic">Create - Shape - Build</p>
-				</div>
-			</div>
-			<br/><br/>
-			<div class="row">
-			  <ul class="col-sm-6 col-md-4" id="photo-grid">
-				<li class="thumbnail">
-				  <a href="project_dots.html">
-				  <figure>
-				  <img data-src="holder.js/300x300" src="img/dots.png" style="margin-left: 30px; width: 210px; height: 270px">
-				  <figcaption><p style="margin-top: 80px; position: absolute">STATIC</p></figcaption>
-				  <figcaption style="z-index: 99; background: rgba(255, 255, 255, 0.80);"><p class="caption" style="font-family: 'Pacifico', cursive; font-size: 25px; top: -11px; color: #808080"> project</p></figcaption>
-				  </figure>
-				  </a>
-				  <div class="caption">
-					<p class="text-center" style="font: 14px Open Sans;  color:  #404040"><strong>ABOUT</strong></p>
-					<p style="margin-left: 2em; margin-right: 2em">Comparing multiple variables through dots.</p>
-				  </div>
-				</li>
-			   </ul>
-			  <!--li class="col-sm-10 col-md-8" style="margin-center: 25px; margin-right: 1px">
-						<p class="text-center" style="font: 14px Open Sans;  color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-center: 25px; margin-right: 1px">Transitional layers of neighborhood indicators.</p>
-			  </li-->
-			 
-			  <ul class="col-sm-6 col-md-4" id="photo-grid">
-				<li class="thumbnail">
-				  <a href="project_income.html">
-				  <figure>
-				  <img data-src="holder.js/300x300" src="img/heatmap.png" style="margin-left: 30px; width: 200px; height: 270px">
-				  <figcaption><p style="margin-top: 80px; position: absolute">STATIC</p></figcaption>
-				  <figcaption style="z-index: 99; background: rgba(255, 255, 255, 0.80);"><p class="caption" style="font-family: 'Pacifico', cursive; font-size: 25px;top: -11px; color: #808080"> project</p></figcaption>
-				  </figure>
-				  </a>
-				  <div class="caption">
-					<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-					<p style="margin-left: 2em; margin-right: 2em">Analyzing income wealth gap.</p>
-				  </div>
-				</li>
-			  </ul>
-			  <!--li class="col-sm-10 col-md-8" style="margin-center: 25px; margin-right: 1px">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-center: 25px; margin-right: 1px">Comprehensive layers of Washington D.C.</p>
-			  </li-->
-			  
-			  <ul class="col-sm-6 col-md-4" id="photo-grid">
-					<li class="thumbnail">
-					  <a href="project_countries.html">
-					  <figure>
-					  <img data-src="holder.js/300x300" src="img/urban_agricultural.png" style="width: 300px; height: 270px">
-					  <figcaption><p style="margin-top: 80px; position: absolute">STATIC</p></figcaption>
-					  <figcaption style="z-index: 99; background: rgba(255, 255, 255, 0.80);"><p class="caption" style="font-family: 'Pacifico', cursive; font-size: 25px; top: -11px; color: #808080"> project</p></figcaption>
-					  </figure>
-					  </a>
-					   <div class="caption">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-left: 2em; margin-right: 2em">Comparing countries back to back.</p>
-					   </div>
-					</li>
-				</ul>
-				<!--li class="col-sm-10 col-md-8" style="margin-center: 25px; margin-right: 1px">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-center: 25px; margin-right: 1px">Comparing countries back to back.</p>
-				</li-->
-			
-			</div>
-			<br/><br/><br/><br/>
-			<div class="row">
-			  <ul class="col-sm-6 col-md-4" id="photo-grid">
-				<li class="thumbnail">
-				  <a href="project_treemap.html">
-				  <figure>
-				  <img data-src="holder.js/300x300" src="img/indicatormap.png" style="margin-left: 30px; width: 210px; height: 270px">
-				  <figcaption><p style="margin-top: 80px; position: absolute">INTERACTIVE</p></figcaption>
-				  <figcaption style="z-index: 99; background: rgba(255, 255, 255, 0.80);"><p class="caption" style="font-family: 'Pacifico', cursive; font-size: 25px; top: -11px; color: #808080"> project</p></figcaption>
-				  </figure>
-				  </a>
-				  <div class="caption">
-					<p class="text-center" style="font: 14px Open Sans;  color:  #404040"><strong>ABOUT</strong></p>
-					<p style="margin-left: 2em; margin-right: 2em">Transitional layers of neighborhood indicators.</p>
-				  </div>
-				</li>
-			 </ul>
-			  <!--li class="col-sm-10 col-md-8" style="margin-center: 25px; margin-right: 1px">
-						<p class="text-center" style="font: 14px Open Sans;  color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-center: 25px; margin-right: 1px">Transitional layers of neighborhood indicators.</p>
-			  </li-->
-			   
-			  <ul class="col-sm-6 col-md-4" id="photo-grid">
-				<li class="thumbnail">
-				  <a href="project_cityprint.html">
-				  <figure>
-				  <img data-src="holder.js/300x300" src="img/cimage.png" style="margin-left: 30px; width: 200px; height: 270px">
-				  <figcaption><p style="margin-top: 80px; position: absolute">INTERACTIVE</p></figcaption>
-				  <figcaption style="z-index: 99; background: rgba(255, 255, 255, 0.80);"><p class="caption" style="font-family: 'Pacifico', cursive; font-size: 25px;top: -11px; color: #808080"> project</p></figcaption>
-				  </figure>
-				  </a>
-				  <div class="caption">
-					<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-					<p style="margin-left: 2em; margin-right: 2em">Comprehensive layers of Washington D.C.</p>
-				  </div>
-				</li>
-			    </ul>
-			  <!--li class="col-sm-10 col-md-8" style="margin-center: 25px; margin-right: 1px">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-center: 25px; margin-right: 1px">Comprehensive layers of Washington D.C.</p>
-			  </li-->
-			
-			  <ul class="col-sm-6 col-md-4" id="photo-grid">
-					<li class="thumbnail">
-					  <a href="project_chesapeake.html">
-					  <figure>
-					  <img data-src="holder.js/300x300" src="img/chesapeake.png" style="width: 300px; height: 280px">
-					  <figcaption><p style="margin-top: 80px; position: absolute">STATIC</p></figcaption>
-					  <figcaption style="z-index: 99; background: rgba(255, 255, 255, 0.80);"><p class="caption" style="font-family: 'Pacifico', cursive; font-size: 25px; top: -11px; color: #808080"> project</p></figcaption>
-					  </figure>
-					  </a>
-					   <div class="caption">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-left: 2em; margin-right: 2em">High level visual of crab spawning trends.</p>
-					   </div>
-					</li>
-			  	</ul>
-				
-				<!--li class="col-sm-10 col-md-8" style="margin-center: 25px; margin-right: 1px">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-center: 25px; margin-right: 1px">Comparing countries back to back.</p>
-				</li>
-				</ul>
-			</div>
-			 
-			<!--div class="row" id="datat2">
-					<div class="col-sm-6 col-md-4">
-						<p class="text-center" style="font: 14px Open Sans;  color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-left: 7em; margin-right: 7em">Transitional layers of neighborhood indicators.</p>
-					</div>
-					<div class="col-sm-6 col-md-4">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-left: 7em; margin-right: 7em">Comprehensive layers of Washington D.C.</p>
-					</div>
-					<div class="col-sm-6 col-md-4">
-						<p class="text-center" style="font: 14px Open Sans; color:  #404040"><strong>ABOUT</strong></p>
-						<p style="margin-left: 7em; margin-right: 7em">Comparing countries back to back.</p>
-					</div>
-			</div-->
-		</div>
-	</div>
-	</div>
-	</div>
-		
-		<div id="contact" style="margin-top: 5px;">
-        <div class="row text-center" id="arrowd2">
-            <div class="col-md-6 col-md-offset-3">
-                <img src="img/arrowb.png" alt="arrow">
+<body>
+    <nav class="navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                 </button>
+                <a class="navbar-brand" href="index.html">by</a>
             </div>
-        </div>	
+            <div id="navbarCollapse" class="navbar-collapse collapse">
+                <ul class="nav navbar-default nav-tabs pull-right" role="tablist">
+                    <li class="active"><a href="#profile" role="tab" data-toggle="tab">PROFILE</a></li>
+                    <li><a href="#proj" role="tab" data-toggle="tab">PROJECTS</a></li>
+                    <li><a href="#skills" role="tab" data-toggle="tab">SKILLS</a></li>
+                    <li><a href="#contact" role="tab" data-toggle="tab">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tab-content">
+        
+        <div id="profile" role="tabpanel" class="tab-pane active">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center">
-                        <p style="font-family: 'Pacifico', cursive; font-size: 25px;">Contact Info...</p>
-                        <br/>
-                        <p style="font-family: 'Raleway'; font-size: 20px;"><strong>Brittney Younger</strong></p>
-                        <img src="img/facesquare.png" class="img-circle" style="width: 150px; border: 3px solid white; margin: 20px 0;">
-                        <p>Fairfax, Virginia</p>
-                        <br/>
-                        <a href="data/Younger_Brittney_Resume.pdf" class="btn minfo">Print Resume</a>
-                        <span style="padding: 0 15px; font-size: 18px; font-family: 'Pacifico', cursive;"> or </span>
-                        <a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" class="btn minfo">Find on LinkedIn</a>
+                <div class="row text-center">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 style="font-size: 55px; font-family: 'Raleway'; font-weight: 700;">Brittney Younger</h1>
+                        <p style="margin-top: 40px; font-size: 18px; line-height: 1.8;">
+                            <strong>I'm a PMP and SAFe Scrum Master with 14+ years of experience providing business analysis, analytics, process improvement, and project management expertise to stakeholders across various industries.</strong>
+                        </p>
+                        <div style="margin-top: 50px; border-top: 2px solid #33baaf; display: inline-block; padding-top: 15px;">
+                            <span style="font-family: 'Raleway'; font-size: 20px; color: #33baaf; text-transform: uppercase; letter-spacing: 2px;"><strong>Passion:</strong></span>
+                            <span style="font-size: 20px; margin-left: 10px;">Project Management and Data Storytelling</span>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="row" style="margin-top: 80px; font-size: 12px; opacity: 0.9;">
-                <div class="col-md-6 col-md-offset-3 text-center">
-				<p id="footerinfo">Works © Brittney Younger 2026</p>
-				<p id="footerinfo">Please do not reproduce without the expressed written consent of Brittney Younger.</p>
-				<p id="footerinfo"> "Graduate Cap" created by Marc Haumann from the Noun Project.</p>
-				<p id="footerinfo"> Word cloud background was created by WordItOut.com.</p>
-				</div>
-			</div>
-		</div>
-	  </div>
-	</div>
-</body>
+            <div id="blockcolor" style="margin-top: 80px;">
+                <div class="container text-center">
+                    <img src="img/arrowg2.png" style="margin-bottom: 40px;">
+                    <h3 style="font-family: 'Raleway'; margin-bottom: 40px;">Education</h3>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <p><strong>MARYLAND INSTITUTE COLLEGE of ART</strong></p>
+                            <img src="img/noun_1051.svg" style="width: 80px; margin: 20px 0;">
+                            <p>2014 | <strong>MPS</strong><br>Information Visualization</p>
+                        </div>
+                        <div class="col-sm-2" style="font-family: 'Pacifico'; font-size: 45px; color: #ccc; padding-top: 40px;">&</div>
+                        <div class="col-sm-5">
+                            <p><strong>UNIVERSITY of DELAWARE</strong></p>
+                            <img src="img/noun_1051.svg" style="width: 80px; margin: 20px 0;">
+                            <p>2010 | <strong>BS</strong><br>International Business</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="proj" role="tabpanel" class="tab-pane">	
+            <div class="container">
+                <h2 class="text-center" style="font-family: 'Pacifico'; color: #33baaf; margin: 50px 0;">Create - Shape - Build</h2>
+                
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <a href="project_dots.html" class="thumbnail text-center">
+                            <span class="project-badge">STATIC</span>
+                            <img src="img/dots.png" style="height: 250px;">
+                            <div class="caption">
+                                <strong>ABOUT</strong><p>Comparing multiple variables through dots.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="project_income.html" class="thumbnail text-center">
+                            <span class="project-badge">STATIC</span>
+                            <img src="img/heatmap.png" style="height: 250px;">
+                            <div class="caption">
+                                <strong>ABOUT</strong><p>Analyzing the income wealth gap.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="project_countries.html" class="thumbnail text-center">
+                            <span class="project-badge">STATIC</span>
+                            <img src="img/urban_agricultural.png" style="height: 250px;">
+                            <div class="caption">
+                                <strong>ABOUT</strong><p>Comparing countries back to back.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="project_treemap.html" class="thumbnail text-center">
+                            <span class="project-badge" style="background: #888;">INTERACTIVE</span>
+                            <img src="img/indicatormap.png" style="height: 250px;">
+                            <div class="caption">
+                                <strong>ABOUT</strong><p>Transitional layers of neighborhood indicators.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="project_cityprint.html" class="thumbnail text-center">
+                            <span class="project-badge" style="background: #888;">INTERACTIVE</span>
+                            <img src="img/cimage.png" style="height: 250px;">
+                            <div class="caption">
+                                <strong>ABOUT</strong><p>Comprehensive layers of Washington D.C.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <a href="project_chesapeake.html" class="thumbnail text-center">
+                            <span class="project-badge">STATIC</span>
+                            <img src="img/chesapeake.png" style="height: 250px;">
+                            <div class="caption">
+                                <strong>ABOUT</strong><p>High level visual of crab spawning trends.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" role="tabpanel" class="tab-pane">
+            <div class="container">
+                <div class="row" id="blockcolor4" style="margin-top: 40px;">
+                    <div class="col-md-6 col-md-offset-1">
+                        <h3 style="font-family: 'Pacifico'; margin-bottom: 30px;">Professional Skills...</h3>
+                        <p style="font-size: 16px; margin-bottom: 25px;">Deliver a strategic blend of <strong style="color: #33baaf">Project Management</strong> excellence & <strong style="color: #33baaf">Agile leadership</strong> to drive business growth.</p>
+                        <p style="font-size: 16px; margin-bottom: 25px;">Leverage <strong style="color: #33baaf">certified PMP & CSM</strong> expertise to streamline workflows and enhance team velocity.</p>
+                        <p style="font-size: 16px;">Passionate about translating <strong style="color: #33baaf">complex requirements</strong> into actionable roadmaps that deliver value.</p>
+                    </div>	
+                    <div class="col-md-4 text-center">
+                        <h3 style="font-family: 'Pacifico'; margin-bottom: 30px;">Certifications...</h3>
+                        <img src="img/SSM Badge.png" style="width: 120px; margin: 15px;">
+                        <img src="img/PMP Badge.png" style="width: 120px; margin: 15px;">
+                    </div>
+                </div>
+            </div>				
+        </div>
+
+        <div id="contact" role="tabpanel" class="tab-pane">
+            <div id="blockcolor3">
+                <div class="container text-center">
+                    <img src="img/arrowb.png" style="margin-bottom: 40px;">
+                    <h2 style="font-family: 'Pacifico'; font-size: 35px;">Let's Connect...</h2>
+                    <img src="img/facesquare.png" class="img-circle" style="width: 160px; border: 5px solid white; margin: 30px 0;">
+                    <h3 style="font-family: 'Raleway'; font-weight: bold;">Brittney Younger</h3>
+                    <p style="font-size: 18px;">Fairfax, Virginia</p>
+                    
+                    <div style="margin-top: 40px;">
+                        <a href="data/Younger_Brittney_Resume.pdf" class="btn minfo">PRINT RESUME</a>
+                        <span style="font-family: 'Pacifico'; font-size: 24px; margin: 0 15px;"> or </span>
+                        <a href="https://www.linkedin.com/pub/brittney-younger/1a/a4a/1ba" class="btn minfo">LINKEDIN</a>
+                    </div>
+                    
+                    <div style="margin-top: 100px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 30px;">
+                        <p id="footerinfo">Works © Brittney Younger 2026</p>
+                        <p id="footerinfo">"Graduate Cap" icon by Marc Haumann from the Noun Project.</p>
+                        <p id="footerinfo">Word cloud background generated via WordItOut.com.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> </body>
 </html>
-
